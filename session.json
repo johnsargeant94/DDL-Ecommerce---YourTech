@@ -1,0 +1,12 @@
+expires = some date
+session = {
+    "cookie": {
+        "originalMaxAge": 7200000,
+        "expires": "2020-10-26T12:48:10.097Z",
+        "secure": false,
+        "httpOnly": true,
+        "path": "/",
+        "sameSite": true
+    },
+    "userID": "SEy9NLWKFqUrbmmFk7SrU"
+}

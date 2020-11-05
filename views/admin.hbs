@@ -1,0 +1,19 @@
+<h1>Admin Page</h1>
+
+<div class="Product">
+      <h1>Create Product</h1>
+      <form action="/" method="POST">
+        <label for="name">Name of Product:</label>
+          <input type="text" name="name">
+          <br>
+        <label for="price">Price:</label>
+          <input type="text" name="price">
+          <br>
+        <label for="inStock">Quantity:</label>
+          <input type="text" name="inStock">
+          <br>
+          <input type="submit" name="create">
+      </form>
+  <p>{{success}}</p>
+  <p>{{err}}</p>
+</div>

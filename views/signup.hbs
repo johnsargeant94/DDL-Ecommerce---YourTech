@@ -1,0 +1,57 @@
+<div class="container">
+    <div class="row align-items-start">
+        <div class="col">
+        </div>
+        <div class="col">
+            <h1>Signup page</h1>
+        </div>
+        <div class="col">
+        </div>
+    </div>
+    <div class="row align-items-center">
+        <div class="col">
+        </div>
+
+        <div class="col">
+            <form action="/signup" method="post">
+                <div class="form-group">
+                    <label for="name">Name</label>
+                    <input type="text" name="name" class="form-control" id="name">
+                </div>
+                <div class="form-group">
+                    <label for="Email1">Email address</label>
+                    <input type="email" name="email" class="form-control" id="Email1" aria-describedby="emailHelp">
+                    <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone
+                        else.</small>
+                </div>
+                <div class="form-group">
+                    <label for="exampleInputPassword1">Password</label>
+                    <input type="password" name="password" class="form-control" id="exampleInputPassword1">
+                </div>
+
+        </div>
+        <div class="form-group">
+            <label for="age">Age</label>
+            <input type="number" name="age" class="form-control" id="age">
+        </div>
+        <div class="form-group">
+            <label for="Number">Phone Number</label>
+            <input type="tel" name="phoneNumber" class="form-control" id="Number">
+        </div>
+        <button type="submit" value="login" class="btn btn-primary">Submit</button>
+        </form>
+
+
+        <div class="col">
+        </div>
+    </div>
+    <div class="row align-items-end">
+        <div class="col">
+        </div>
+        <div class="col">
+            <p class="error">{{err}}</p>
+        </div>
+        <div class="col">
+        </div>
+    </div>
+</div>
