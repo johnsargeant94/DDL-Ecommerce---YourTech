@@ -1,11 +1,15 @@
 const {nanoid} = require('nanoid');
 const router = require('express').Router();
-
+const ProductModel = require('../models/productModel');
 const UserModel = require('../models/userModel');
 const {checkSignedIn} = require('../controllers/auth');
 
-router.get('/', (req, res) => {
-    res.render('index');
+router.get('/', async (req, res) => {
+    let products = await ProductModel.find({});
+    // products = products.toObject();]
+    console.log(products)
+    products = products.map(product => product.toObject());
+    res.render('index', {products});
 });
 
 router.get('/users', async(req, res)=> {

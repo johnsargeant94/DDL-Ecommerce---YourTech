@@ -6,13 +6,42 @@
       <p class="lead text-muted">Best Deals on Tech from Phones to laptops, shop below to see the content.</p>
     </div>
   </section>
- 
-  <div class="album py-5 bg-light">
-    <div class="container">
 
-      <div class="row">
-        
+  <div class="container">
+    <div class="row row-cols-3">
+      {{#each products}}
+      <div class="col">
+        <svg class="bd-placeholder-img card-img-top" width="100%" height="225" xmlns="http://www.w3.org/2000/svg"
+          preserveAspectRatio="xMidYMid slice" focusable="false" role="img" aria-label="Placeholder: Thumbnail">
+          <title>Placeholder</title>
+          <rect width="100%" height="100%" fill="#55595c" /><text x="50%" y="50%" fill="#eceeef"
+            dy=".3em">Thumbnail</text>
+        </svg>
+        <p>{{this.name}}</p>
+        <p>{{this.inStock}}</p>
+        <p>{{this.price}}</p>
+        <div class="btn-group">
+          <button type="button" class="btn btn-sm btn-outline-secondary">Add to Basket</button>
+        </div>
+      </div>
+      {{/each}}
+
+    </div>
+  </div>
+
+
+
+
+
+
+
+
+
+
+  {{!-- <div class="album py-5 bg-light">
+    <div class="container">
        {{#each products}}
+       <div class="row">
         <div class="col-md-4">
                 <div class="card mb-4 shadow-sm">
                     <svg class="bd-placeholder-img card-img-top" width="100%" height="225" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice" focusable="false" role="img" aria-label="Placeholder: Thumbnail"><title>Placeholder</title><rect width="100%" height="100%" fill="#55595c"/><text x="50%" y="50%" fill="#eceeef" dy=".3em">Thumbnail</text></svg>
@@ -32,6 +61,6 @@
       
       </div>
     </div>
-  </div>
+  </div> --}}
 
 </main>

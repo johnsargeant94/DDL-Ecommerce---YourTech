@@ -7,7 +7,6 @@ const express = require('express');
 const path = require('path'); //for css and photos front-end
 // Model
 const SessionModel = require('./models/sessionModel');
-const ProductModel = require('./models/productModel');
 // Routes
 const router = require('./routes/router');
 // const productRouter = require('./routes/productRouter');
@@ -53,15 +52,9 @@ app.use(async (req, res, next) => {
 });
 
 app.use('/', router);
-// app.use('/', productRouter)
+// app.use('/products', productRouter)
 
-// Getting Products for Home Page
-app.get('/', async (req, res) => {
-    let products = await ProductModel.find({});
-    // products = products.toObject();
-    products = products.map(product => product.toObject());
-    res.render('index', {products});
-});
+
 
 // Posting Products using Form in admin page
 
