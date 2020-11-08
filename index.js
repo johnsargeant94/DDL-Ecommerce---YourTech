@@ -5,6 +5,8 @@ const session = require('express-session');
 const MongoStore = require('connect-mongo')(session);
 const express = require('express');
 const path = require('path'); //for css and photos front-end
+const dotenv = require('dotenv');
+dotenv.config();
 // Model
 const SessionModel = require('./models/sessionModel');
 const ProductModel = require('./models/productModel');
@@ -12,8 +14,8 @@ const ProductModel = require('./models/productModel');
 // Routes
 const router = require('./routes/router');
 // const productRouter = require('./routes/productRouter');
-
-mongoose.connect('mongodb+srv://John:password123abc@johncluster.f8hda.mongodb.net/signup?retryWrites=true&w=majority', {
+let url = process.env.MongoDB_URL
+mongoose.connect(url, {
     useNewUrlParser: true,
     useUnifiedTopology: true
 });
