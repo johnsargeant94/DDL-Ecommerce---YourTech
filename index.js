@@ -7,6 +7,11 @@ const express = require('express');
 const path = require('path'); //for css and photos front-end
 const dotenv = require('dotenv');
 dotenv.config();
+
+const pubKey = process.env.Publishable_key;
+const secretKey = process.env.Secret_key;
+const Your_Domain = 'http://localhost:3000';
+const stripe = require('stripe')(pubKey);
 // Model
 const SessionModel = require('./models/sessionModel');
 const ProductModel = require('./models/productModel');
@@ -14,7 +19,11 @@ const ProductModel = require('./models/productModel');
 // Routes
 const router = require('./routes/router');
 // const productRouter = require('./routes/productRouter');
-let url = process.env.MongoDB_URL
+
+const url = process.env.MongoDB_URL
+const pubKey = process.env.Publishable_key
+const secretKey = process.env.Secret_key
+
 mongoose.connect(url, {
     useNewUrlParser: true,
     useUnifiedTopology: true
