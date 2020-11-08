@@ -1,19 +1,56 @@
 <h1>Admin Page</h1>
 
 <div class="Product">
-      <h1>Create Product</h1>
-      <form action="/" method="POST">
-        <label for="name">Name of Product:</label>
-          <input type="text" name="name">
-          <br>
-        <label for="price">Price:</label>
-          <input type="text" name="price">
-          <br>
-        <label for="inStock">Quantity:</label>
-          <input type="text" name="inStock">
-          <br>
-          <input type="submit" name="create">
-      </form>
+  <h1>Create Product</h1>
+  <form action="/" method="POST">
+    <label for="name">Name of Product:</label>
+    <input type="text" name="name">
+    <br>
+    <label for="price">Price:</label>
+    <input type="text" name="price">
+    <br>
+    <label for="inStock">Quantity:</label>
+    <input type="text" name="inStock">
+    <br>
+    <label for="image">Image URL:</label>
+    <input type="text" name="image">
+    <br>
+    <label for="category">Choose a Category:</label>
+    <select id="category" name="category">
+      <option value="Computer">Computer</option>
+      <option value="Laptop">Laptop</option>
+      <option value="TV">TV</option>
+      <option value="Watch">Watch</option>
+    </select>
+    <br>
+    <input type="submit" name="create">
+  </form>
   <p>{{success}}</p>
   <p>{{err}}</p>
 </div>
+
+<table class="table table-striped">
+  <thead>
+    <tr>
+      <th scope="col">Name</th>
+      <th scope="col">Price</th>
+      <th scope="col">instock</th>
+      <th scope="col">image</th>
+      <th scope="col">timeUploaded</th>
+
+    </tr>
+  </thead>
+  <tbody>
+    {{#each products}}
+    <tr>
+      <th scope="row">{{this.name}}</th>
+      <td>{{this.price}}</td>
+      <td>{{this.inStock}}</td>
+      <td>{{this.image}}</td>
+      <td>{{this.category}}</td>
+      <td>{{this.timeUploaded}}</td>
+    </tr>
+     {{/each}}
+   
+  </tbody>
+</table>

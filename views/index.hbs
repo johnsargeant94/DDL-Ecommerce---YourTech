@@ -5,21 +5,19 @@
       <h1>Shop</h1>
       <p class="lead text-muted">Best Deals on Tech from Phones to laptops, shop below to see the content.</p>
     </div>
+     {{> categoryNav}}
   </section>
+
+ 
 
   <div class="container">
     <div class="row row-cols-3">
       {{#each products}}
       <div class="col">
-        <svg class="bd-placeholder-img card-img-top" width="100%" height="225" xmlns="http://www.w3.org/2000/svg"
-          preserveAspectRatio="xMidYMid slice" focusable="false" role="img" aria-label="Placeholder: Thumbnail">
-          <title>Placeholder</title>
-          <rect width="100%" height="100%" fill="#55595c" /><text x="50%" y="50%" fill="#eceeef"
-            dy=".3em">Thumbnail</text>
-        </svg>
+        <img src="{{this.image}}" alt="" srcset="" width="100%" height="225">
         <p>{{this.name}}</p>
-        <p>{{this.inStock}}</p>
-        <p>{{this.price}}</p>
+        <p>Quantity:{{this.inStock}}</p>
+        <p>£{{this.price}}</p>
         <div class="btn-group">
           <button type="button" class="btn btn-sm btn-outline-secondary">Add to Basket</button>
         </div>

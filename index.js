@@ -7,6 +7,8 @@ const express = require('express');
 const path = require('path'); //for css and photos front-end
 // Model
 const SessionModel = require('./models/sessionModel');
+const ProductModel = require('./models/productModel');
+
 // Routes
 const router = require('./routes/router');
 // const productRouter = require('./routes/productRouter');
@@ -60,12 +62,14 @@ app.use('/', router);
 
 
 app.post('/', async (req, res) => {
-    const {name, price, inStock} = req.body;
+    const {name, price, inStock, image, category} = req.body;
 
     const product = new ProductModel({
             name: name,
             price: price,
             inStock: inStock,
+            image: image,
+            category: category,
             timeUploaded: Date.now()
     });
     product.save().then(() => {
