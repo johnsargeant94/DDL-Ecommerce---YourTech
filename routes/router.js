@@ -86,15 +86,11 @@ router.get('/logout', (req, res) => {
     res.redirect('/'); //when logged out it will send you back to the home Page
 });
 
+// Showing product on a table
 router.get('/admin', checkSignedIn, async (req, res) => {
     let products = await ProductModel.find({});
-    // products = products.toObject();]
-    // console.log(products)
     products = products.map(product => product.toObject());
     res.render('admin', {products});
-    
-    
-    // res.render('admin');
 });
 
 router.get('/', async (req, res) => {

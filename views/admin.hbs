@@ -1,37 +1,51 @@
- <section class="jumbotron text-center">
-    <div class="container">
-      <h1>Admin Page</h1> 
-    </div>
-  </section>
+<section class="jumbotron text-center">
+  <div class="container">
+    <h1>Admin Page</h1>
+  </div>
+</section>
 
-<div class="Product">
-  <h1>Create Product</h1>
-  <form action="/" method="POST">
-    <label for="name">Name of Product:</label>
-    <input type="text" name="name">
-    <br>
-    <label for="price">Price:</label>
-    <input type="text" name="price">
-    <br>
-    <label for="inStock">Quantity:</label>
-    <input type="text" name="inStock">
-    <br>
-    <label for="image">Image URL:</label>
-    <input type="text" name="image">
-    <br>
-    <label for="category">Choose a Category:</label>
-    <select id="category" name="category">
-      <option value="Computer">Computer</option>
-      <option value="Laptop">Laptop</option>
-      <option value="TV">TV</option>
-      <option value="Watch">Watch</option>
-    </select>
-    <br>
-    <input type="submit" name="create">
-  </form>
-  <p>{{success}}</p>
-  <p>{{err}}</p>
+<h1>Create Product</h1>
+
+<form action="/" method="POST">
+  <div class="form-row">
+
+      <label class="col-sm-2 col-form-label"  for="name">Name of Product:</label >
+    <div class="col-sm-10">
+      <input type="text" name="name">
+    </div>
+
+      <label class="col-sm-2 col-form-label"  for="price">Price:</label >
+    <div class="col-sm-10">
+      <input type="text" name="price">
+    </div>
+
+      <label class="col-sm-2 col-form-label"  for="inStock">Quantity:</label >
+    <div class="col-sm-10">
+      <input type="text" name="inStock">
+    </div>
+      <label class="col-sm-2 col-form-label" for="image">Image URL:</label >
+    <div class="col-sm-10">
+      <input type="text" name="image">
+    </div>
+      <label class="col-sm-2 col-form-label" for="category">Choose a Category:</label >
+    <div class="col-sm-3">
+      <select id="category" name="category" class="form-control">
+        <option value="Computer">Computer</option>
+        <option value="Laptop">Laptop</option>
+        <option value="TV">TV</option>
+        <option value="Watch">Watch</option>
+      </select>
+    </div>
+    <div class="col-sm-10">
+    <button type="submit" class="btn btn-primary" name="create">Sign in</button>
+    </div>
+  </div>
+</form>
 </div>
+<p>{{success}}</p>
+<p>{{err}}</p>
+
+<h1>Products</h1>
 
 <table class="table table-striped">
   <thead>
