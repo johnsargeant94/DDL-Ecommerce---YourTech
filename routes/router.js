@@ -101,8 +101,8 @@ router.get('/', async (req, res) => {
     res.render('index', {products});
 });
 
-router.get('/checkout', (req, res) => {
-    res.render('checkout');
+router.get('/basket', (req, res) => {
+    res.render('basket');
 });
 
 router.get('/Desktop', (req, res) => {
