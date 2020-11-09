@@ -134,9 +134,21 @@ router.get('/Mobile-Phones', (req, res) => {
     res.render('Mobile-Phones');
 });
 
-router.get('/Tablet', (req, res) => {
-    res.render('Tablet');
+
+router.get('/profilesetting', (req, res) => {
+    res.render('profilesetting');
 });
+
+router.get('/updateprofile', (req, res) => {
+    res.render('updateprofile');
+});
+
+router.get('/orderlist', (req, res) => {
+    res.render('orderlist');
+});
+
+
+
 
 
 
