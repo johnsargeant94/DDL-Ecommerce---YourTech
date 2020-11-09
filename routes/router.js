@@ -105,4 +105,29 @@ router.get('/basket', (req, res) => {
     res.render('basket');
 });
 
+router.get('/Desktop', (req, res) => {
+    res.render('Desktop');
+});
+
+router.get('/baskt', (req, res) => {
+    res.render('basket');
+});
+
+router.get('/basket', (req, res) => {
+    res.render('basket');
+});
+
+router.get('/basket', (req, res) => {
+    res.render('basket');
+});
+
+router.get('/basket', (req, res) => {
+    res.render('basket');
+});
+
+router.get('/basket', (req, res) => {
+    res.render('basket');
+});
+
+
 module.exports = router;
