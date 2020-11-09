@@ -101,8 +101,8 @@ router.get('/', async (req, res) => {
     res.render('index', {products});
 });
 
-router.get('/checkout', (req, res) => {
-    res.render('checkout');
+router.get('/basket', (req, res) => {
+    res.render('basket');
 });
 
 router.get('/Desktop', (req, res) => {
@@ -134,9 +134,21 @@ router.get('/Mobile-Phones', (req, res) => {
     res.render('Mobile-Phones');
 });
 
-router.get('/Tablet', (req, res) => {
-    res.render('Tablet');
+
+router.get('/profilesetting', (req, res) => {
+    res.render('profilesetting');
 });
+
+router.get('/updateprofile', (req, res) => {
+    res.render('updateprofile');
+});
+
+router.get('/orderlist', (req, res) => {
+    res.render('orderlist');
+});
+
+
+
 
 
 
