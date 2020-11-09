@@ -1,0 +1,48 @@
+<head>
+    <link rel="stylesheet" href="Watch.css">
+</head>
+<main role="main">
+
+    <section class="jumbotron text-center">
+        <div class="container">
+            <h1>Watches</h1>
+            <p class="lead text-muted">Stylish and affordable watches below.</p>
+        </div>
+        {{> categoryNav}}
+    </section>
+
+
+    <body>
+        <div class="container">
+            <div class="row row-cols-3">
+                {{#each products}}
+                <div class="col" key={{this._id}}>
+                    <img src="{{this.image}}" alt="" srcset="" width="100%" height="225">
+                    <p>{{this.name}}</p>
+                    <p>Quantity:{{this.inStock}}</p>
+                    <p>£{{this.price}}</p>
+                    <div class="btn-group">
+                        <button type="button" class="btn btn-sm btn-outline-secondary">Add to Basket</button>
+                    </div>
+                </div>
+                {{/each}}
+
+            </div>
+        </div>
+
+    </body>
+</main>
+<footer>
+    <div class="card">
+        <div class="card-header">
+            Quote
+        </div>
+        <div class="card-body">
+            <blockquote class="blockquote mb-0">
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.</p>
+                <footer class="blockquote-footer">Someone famous in <cite title="Source Title">Source Title</cite>
+                </footer>
+            </blockquote>
+        </div>
+    </div>
+</footer>
