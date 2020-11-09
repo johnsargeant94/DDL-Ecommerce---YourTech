@@ -110,10 +110,10 @@ router.get('/Desktop', (req, res) => {
 });
 
 router.get('/Laptop', (req, res) => {
-    res.render('laptop');
+    res.render('Laptop');
 });
 
-router.get('/watch', (req, res) => {
+router.get('/Watch', (req, res) => {
     res.render('Watch');
 });
 
@@ -121,12 +121,12 @@ router.get('/Accessories', (req, res) => {
     res.render('Accessories');
 });
 
-router.get('/Mobile-Phone', (req, res) => {
-    res.render('Mobile-Phone');
+router.get('/Mobile-Phones', (req, res) => {
+    res.render('Mobile-Phones');
 });
 
-router.get('/basket', (req, res) => {
-    res.render('basket');
+router.get('/Tablet', (req, res) => {
+    res.render('Tablet');
 });
 
 
