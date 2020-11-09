@@ -1,7 +1,36 @@
-<section class="jumbotron text-center">
-  <div class="container">
-    <h1>Shop</h1>
-    <p class="lead text-muted">Best Deals on Tech from Phones to laptops, shop below to see the content.</p>
-  </div>
-  {{> categoryNav}}
-</section>
+<head>
+  <link rel="stylesheet" href="Accessories.css">
+</head>
+<main role="main">
+
+  <section class="jumbotron text-center">
+    <div class="container">
+      <h1>Accessories</h1>
+      <p class="lead text-muted">Best Deals on Tech Accessories for all your Tech needs below.</p>
+    </div>
+    {{> categoryNav}}
+  </section>
+
+
+  <body>
+    <div class="container">
+      <div class="row row-cols-3">
+        {{#each products}}
+        <div class="col" key={{this._id}}>
+          <img src="{{this.image}}" alt="" srcset="" width="100%" height="225">
+          <p>{{this.name}}</p>
+          <p>Quantity:{{this.inStock}}</p>
+          <p>£{{this.price}}</p>
+          <div class="btn-group">
+            <button type="button" class="btn btn-sm btn-outline-secondary">Add to Basket</button>
+          </div>
+        </div>
+        {{/each}}
+
+      </div>
+    </div>
+  </body>
+</main>
+<footer>
+  <p>this is the footer.</p>
+</footer>

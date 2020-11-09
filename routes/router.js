@@ -109,6 +109,7 @@ router.get('/Desktop', (req, res) => {
     res.render('Desktop');
 });
 
+
 router.get('/success', (req, res) => {
     res.render('success');
 });
@@ -117,25 +118,26 @@ router.get('/cancel', (req, res) => {
     res.render('cancel');
 });
 
-// router.get('/baskt', (req, res) => {
-//     res.render('basket');
-// });
+router.get('/Laptop', (req, res) => {
+    res.render('Laptop');
+});
 
-// router.get('/basket', (req, res) => {
-//     res.render('basket');
-// });
+router.get('/Watch', (req, res) => {
+    res.render('Watch');
+});
 
-// router.get('/basket', (req, res) => {
-//     res.render('basket');
-// });
+router.get('/Accessories', (req, res) => {
+    res.render('Accessories');
+});
 
-// router.get('/basket', (req, res) => {
-//     res.render('basket');
-// });
+router.get('/Mobile-Phones', (req, res) => {
+    res.render('Mobile-Phones');
+});
 
-// router.get('/basket', (req, res) => {
-//     res.render('basket');
-// });
+router.get('/Tablet', (req, res) => {
+    res.render('Tablet');
+});
+
 
 
 module.exports = router;
