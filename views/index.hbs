@@ -5,10 +5,10 @@
       <h1>Shop</h1>
       <p class="lead text-muted">Best Deals on Tech from Phones to laptops, shop below to see the content.</p>
     </div>
-     {{> categoryNav}}
+    {{> categoryNav}}
   </section>
 
- <script src="https://js.stripe.com/v3/"></script>
+  <script src="https://js.stripe.com/v3/"></script>
 
   <div class="container">
     <div class="row row-cols-3">
@@ -16,18 +16,18 @@
       {{#each products}}
       <div class="col" key={{this._id}}>
         <div class="product">
-        <img src="{{this.image}}" alt="" srcset="" width="100%" height="225">
+          <img src="{{this.image}}" alt="" srcset="" width="100%" height="225">
         </div>
         <div class="description">
-        <p>{{this.name}}</p>
-        <p>£{{this.price}}</p>
+          <p>{{this.name}}</p>
+          <p>£{{this.price}}</p>
         </div>
         <p>Quantity:{{this.inStock}}</p>
         <div class="btn-group">
           <button type="button" class="btn btn-sm btn-outline-secondary" id="checkout-button">Buy Now</button>
         </div>
         <div class="btn-group">
-          <button type="button" class="btn btn-sm btn-outline-secondary" >Basket</button>
+          <button type="button" class="btn btn-sm btn-outline-secondary">Basket</button>
         </div>
       </div>
       {{/each}}
@@ -39,29 +39,42 @@
 </main>
 
 <script type="text/javascript">
-    // Create an instance of the Stripe object with your publishable API key
-    var stripe = Stripe('pk_test_51HlL8yI9F1gcHFZ4iFiaJ19HNXSFNM8b1sNqAq2hvObeOgNubnv8d4w5pimnImMJbYfqBxnYTh7Z3oxpRUQIldwM00qwbonWvm');
-    var checkoutButton = document.getElementById("checkout-button");
-    checkoutButton.addEventListener("click", function () {
-      fetch("/create-session", {
-        method: "POST",
+  // Create an instance of the Stripe object with your publishable API key
+  var stripe = Stripe('pk_test_51HlL8yI9F1gcHFZ4iFiaJ19HNXSFNM8b1sNqAq2hvObeOgNubnv8d4w5pimnImMJbYfqBxnYTh7Z3oxpRUQIldwM00qwbonWvm');
+  var checkoutButton = document.getElementById("checkout-button");
+  checkoutButton.addEventListener("click", function () {
+    fetch("/create-session", {
+      method: "POST",
+    })
+      .then(function (response) {
+        return response.json();
       })
-        .then(function (response) {
-          return response.json();
-        })
-        .then(function (session) {
-          return stripe.redirectToCheckout({ sessionId: session.id });
-        })
-        .then(function (result) {
-          // If redirectToCheckout fails due to a browser or network
-          // error, you should display the localized error message to your
-          // customer using error.message.
-          if (result.error) {
-            alert(result.error.message);
-          }
-        })
-        .catch(function (error) {
-          console.error("Error:", error);
-        });
-    });
-  </script>
+      .then(function (session) {
+        return stripe.redirectToCheckout({ sessionId: session.id });
+      })
+      .then(function (result) {
+        // If redirectToCheckout fails due to a browser or network
+        // error, you should display the localized error message to your
+        // customer using error.message.
+        if (result.error) {
+          alert(result.error.message);
+        }
+      })
+      .catch(function (error) {
+        console.error("Error:", error);
+      });
+  });
+</script>
+<footer>
+  <div class="card">
+    <div class="card-header">
+      Quote
+    </div>
+    <div class="card-body">
+      <blockquote class="blockquote mb-0">
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.</p>
+        <footer class="blockquote-footer">Someone famous in <cite title="Source Title">Source Title</cite></footer>
+      </blockquote>
+    </div>
+  </div>
+</footer>
