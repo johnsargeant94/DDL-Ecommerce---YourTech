@@ -9,9 +9,16 @@ const dotenv = require('dotenv');
 dotenv.config();
 
 // const pubKey = process.env.Publishable_key;
-// const secretKey = process.env.Secret_key;
+const url = process.env.MongoDB_URL
+const pubKey = process.env.Publishable_key
+const secretKey = process.env.Secret_key;
 // const Your_Domain = 'http://localhost:3000';
-// const stripe = require('stripe')(pubKey);
+const stripe = require('stripe')(secretKey);
+
+const YOUR_DOMAIN = 'http://localhost:3000';
+
+
+
 // Model
 const SessionModel = require('./models/sessionModel');
 const ProductModel = require('./models/productModel');
@@ -20,9 +27,7 @@ const ProductModel = require('./models/productModel');
 const router = require('./routes/router');
 // const productRouter = require('./routes/productRouter');
 
-const url = process.env.MongoDB_URL
-const pubKey = process.env.Publishable_key
-const secretKey = process.env.Secret_key
+
 
 mongoose.connect(url, {
     useNewUrlParser: true,
@@ -91,6 +96,27 @@ app.post('/', async (req, res) => {
     });
 })
 
-
+app.post('/create-session', async (req, res) => {
+    const session = await stripe.checkout.sessions.create({
+      payment_method_types: ['card'],
+      line_items: [
+        {
+          price_data: {
+            currency: 'GBP',
+            product_data: {
+              name: 'Stubborn Attachments',
+              images: ['https://i.imgur.com/EHyR2nP.png'],
+            },
+            unit_amount: 2000,
+          },
+          quantity: 1,
+        },
+      ],
+      mode: 'payment',
+      success_url: `${YOUR_DOMAIN}/success`,
+      cancel_url: `${YOUR_DOMAIN}/cancel`,
+    });
+    res.json({ id: session.id });
+  });
 
 app.listen('3000');

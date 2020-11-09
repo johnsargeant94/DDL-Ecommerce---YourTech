@@ -101,33 +101,41 @@ router.get('/', async (req, res) => {
     res.render('index', {products});
 });
 
-router.get('/basket', (req, res) => {
-    res.render('basket');
+router.get('/checkout', (req, res) => {
+    res.render('checkout');
 });
 
 router.get('/Desktop', (req, res) => {
     res.render('Desktop');
 });
 
-router.get('/baskt', (req, res) => {
-    res.render('basket');
+router.get('/success', (req, res) => {
+    res.render('success');
 });
 
-router.get('/basket', (req, res) => {
-    res.render('basket');
+router.get('/cancel', (req, res) => {
+    res.render('cancel');
 });
 
-router.get('/basket', (req, res) => {
-    res.render('basket');
-});
+// router.get('/baskt', (req, res) => {
+//     res.render('basket');
+// });
 
-router.get('/basket', (req, res) => {
-    res.render('basket');
-});
+// router.get('/basket', (req, res) => {
+//     res.render('basket');
+// });
 
-router.get('/basket', (req, res) => {
-    res.render('basket');
-});
+// router.get('/basket', (req, res) => {
+//     res.render('basket');
+// });
+
+// router.get('/basket', (req, res) => {
+//     res.render('basket');
+// });
+
+// router.get('/basket', (req, res) => {
+//     res.render('basket');
+// });
 
 
 module.exports = router;
