@@ -8,10 +8,10 @@ const path = require('path'); //for css and photos front-end
 const dotenv = require('dotenv');
 dotenv.config();
 
-const pubKey = process.env.Publishable_key;
-const secretKey = process.env.Secret_key;
-const Your_Domain = 'http://localhost:3000';
-const stripe = require('stripe')(pubKey);
+// const pubKey = process.env.Publishable_key;
+// const secretKey = process.env.Secret_key;
+// const Your_Domain = 'http://localhost:3000';
+// const stripe = require('stripe')(pubKey);
 // Model
 const SessionModel = require('./models/sessionModel');
 const ProductModel = require('./models/productModel');
@@ -90,5 +90,7 @@ app.post('/', async (req, res) => {
         res.render('admin', {err})
     });
 })
+
+
 
 app.listen('3000');

@@ -50,6 +50,7 @@
 <table class="table table-striped">
   <thead>
     <tr>
+      <th scope="col">ID</th>
       <th scope="col">Name</th>
       <th scope="col">Price</th>
       <th scope="col">instock</th>
@@ -62,7 +63,8 @@
   <tbody>
     {{#each products}}
     <tr>
-      <th scope="row">{{this.name}}</th>
+      <th scope="row">{{this._id}}</th>
+      <td>{{this.name}}</td>
       <td>{{this.price}}</td>
       <td>{{this.inStock}}</td>
       <td>{{this.image}}</td>
