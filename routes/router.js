@@ -109,20 +109,20 @@ router.get('/Desktop', (req, res) => {
     res.render('Desktop');
 });
 
-router.get('/baskt', (req, res) => {
-    res.render('basket');
+router.get('/Laptop', (req, res) => {
+    res.render('laptop');
 });
 
-router.get('/basket', (req, res) => {
-    res.render('basket');
+router.get('/watch', (req, res) => {
+    res.render('Watch');
 });
 
-router.get('/basket', (req, res) => {
-    res.render('basket');
+router.get('/Accessories', (req, res) => {
+    res.render('Accessories');
 });
 
-router.get('/basket', (req, res) => {
-    res.render('basket');
+router.get('/Mobile-Phone', (req, res) => {
+    res.render('Mobile-Phone');
 });
 
 router.get('/basket', (req, res) => {
