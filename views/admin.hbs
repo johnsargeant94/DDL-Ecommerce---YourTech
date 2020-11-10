@@ -77,8 +77,9 @@
       <td>{{this.image}}</td>
       <td>{{this.category}}</td>
       <td>{{this.timeUploaded}}</td>
-      <td><button type="button" class="btn btn-indigo btn-sm m-0">Edit</button></td>
-      <td><button type="button" class="btn btn-indigo btn-sm m-0">onclick="addToBasket(event)" data-id =
+      <td><button type="button" class="btn btn-indigo btn-sm m-0" onclick="editProduct(event)" data-id =
+          "{{this._id}}">Edit</button></td>
+      <td><button type="button" class="btn btn-indigo btn-sm m-0" onclick="deleteProduct(event)" data-id =
           "{{this._id}}">Delete</button></td>
     </tr>
     {{/each}}

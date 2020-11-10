@@ -1,39 +1,8 @@
 function addToBasket (event) {
     console.log(event.target.dataset.id);
+    // let productID = event.target.dataset.id;
+
 } 
-
-console.log("hello")
-
-// let carts = document.querySelectorAll('#basketBTN');
-
-// let products = [
-//     {{#each products}}
-//     {
-        
-//         name: {{ this.name }},
-//         price: { { this.price } },
-//         inStock: { { this.inStock } },
-//         image: { { this.image } }
-//     },
-//     {{/each}}
-
-// ]
-
-
-// for (let i=0; i < carts.length; i++){
-//     carts[i].addEventListener('click', () => {
-//         cartNumbers(products[i]);
-
-//     })
-// }
-
-// function onLoadCartNumbers() {
-//     let productNumbers = localStorage.getItem('cartNumbers');
-
-//     if(productNumbers) {
-//         document.querySelector('basketNum').textContent = productNumbers;
-//     }
-// }
 
 // function cartNumbers(product) {
 //     console.log("the product clicked is", product);
@@ -50,5 +19,28 @@ console.log("hello")
 //     }
 
 // }
+
+
+// let carts = document.querySelectorAll('#basketBTN');
+
+// for (let i=0; i < carts.length; i++){
+//     carts[i].addEventListener('click', () => {
+//         cartNumbers(productID[i]);
+
+//     })
+// }
+
+
+// // let products = [
+
+// function onLoadCartNumbers() {
+//     let productNumbers = localStorage.getItem('cartNumbers');
+
+//     if(productNumbers) {
+//         document.querySelector('basketNum').textContent = productNumbers;
+//     }
+// }
+
+
 
 // onLoadCartNumbers()
