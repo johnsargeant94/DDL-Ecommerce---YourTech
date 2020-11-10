@@ -112,10 +112,13 @@ router.get('/basket', (req, res) => {
     res.render('basket');
 });
 
-router.get('/Desktop', (req, res) => {
-    res.render('Desktop');
+router.get('/Desktop', async (req, res) => {
+    let products = await ProductModel.find({category: 'Desktop'});
+    // products = products.toObject();]
+    console.log(products)
+    products = products.map(product => product.toObject());
+    res.render('Desktop', {products});
 });
-
 
 router.get('/success', (req, res) => {
     res.render('success');
@@ -125,8 +128,13 @@ router.get('/cancel', (req, res) => {
     res.render('cancel');
 });
 
-router.get('/Laptop', (req, res) => {
-    res.render('Laptop');
+
+router.get('/Laptop', async (req, res) => {
+    let products = await ProductModel.find({category: 'Laptop'});
+    // products = products.toObject();]
+    console.log(products)
+    products = products.map(product => product.toObject());
+    res.render('Laptop', {products});
 });
 
 router.get('/Watch', (req, res) => {
@@ -137,8 +145,13 @@ router.get('/Accessories', (req, res) => {
     res.render('Accessories');
 });
 
-router.get('/Mobile-Phones', (req, res) => {
-    res.render('Mobile-Phones');
+
+router.get('/Mobile-Phones', async (req, res) => {
+    let products = await ProductModel.find({category: 'Mobile phones'});
+    // products = products.toObject();]
+    console.log(products)
+    products = products.map(product => product.toObject());
+    res.render('Mobile-Phones', {products});
 });
 
 router.get('/Tablet', (req, res) => {
