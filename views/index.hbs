@@ -15,13 +15,17 @@
 
       {{#each products}}
       <div class="col">
+    
+
+
         <div class="product">
-          <img src="{{this.image}}" alt="" srcset="" width="100%" height="225">
+          <img src="{{this.image}}" alt="" srcset="" width="300" height="225">
         </div>
         <div class="description">
           <p>{{this.name}}</p>
           <p>£{{this.price}}</p>
         </div>
+
         <p>Quantity:{{this.inStock}}</p>
         <div class="btn-group">
           <button type="button" class="btn btn-sm btn-outline-secondary" id="checkout-button">Buy Now</button>
