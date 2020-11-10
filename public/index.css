@@ -6,6 +6,18 @@ footer .credibility {
         width: 40%;
         font-size: 15px;
         list-style-type: none;
+        margin-left: 430px;
       
+}
+
+footer .payment-methods {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        color: #b2b2b2;
+        width: 25%;
+        font-size: 15px;
+        list-style-type: none;
+        margin-left: 580px;
 }
 

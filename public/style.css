@@ -5,3 +5,11 @@
 .description {
     font-weight: bold;
 }
+
+.nav-item {
+    margin-right: 20px;
+}
+
+.nav-item1 {
+    margin-right: 100px;
+}
