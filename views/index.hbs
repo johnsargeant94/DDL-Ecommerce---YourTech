@@ -1,5 +1,6 @@
 <head>
   <link rel="stylesheet" href="index.css">
+  <script src="https://kit.fontawesome.com/a076d05399.js"></script>
 </head>
 <body>
   
@@ -10,6 +11,7 @@
     <div class="container">
       <h1>Shop</h1>
       <p class="lead text-muted">Best Deals on Tech from Phones to laptops, shop below to see the content.</p>
+      <br>
     </div>
     {{> categoryNav}}
   </section>
@@ -75,23 +77,37 @@
       });
   });
 </script>
-
+<br>
 <footer>
   <div class="card">
     <div class="card-header">
       <div class="card-body">
       <blockquote class="blockquote mb-0">
-        <img src="Yourtech.png" height="75" alt="mdb logo">
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.</p>
-        <footer class="blockquote-footer">Someone famous in <cite title="Source Title">Source Title</cite></footer>
+        <ul class="credibility">
+         <img src="Yourtech.png" height="75" alt="mdb logo">
+      <li class="text">&copy; 2020 YourTech</li>
+      <li class="text">Privacy Policy</li>
+      <li class="text">Terms of Use</li>
+    </ul>
+        <p></p>
+        
       </blockquote>
     </div>
 
        
-       <ul class="credibility">
-      <li class="text">&copy; 2020 YourTech</li>
-      <li class="text">Privacy Policy</li>
-      <li class="text">Terms of Use</li>
+       
+
+    <ul class="payment-methods">
+      <li class="text">Accepted payment methods</li>
+       <span style="font-size: 30px;">
+      <i class="fab fa-cc-visa"></i>
+      </span>
+      <span style="font-size: 30px;">
+      <i class="fab fa-cc-apple-pay"></i>
+      </span>
+      <span style="font-size: 30px;">
+      <i class="fab fa-cc-paypal"></i>
+      </span>
     </ul>
     </div>
     
