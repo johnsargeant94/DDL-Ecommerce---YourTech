@@ -149,5 +149,6 @@ router.get('/orderlist', (req, res) => {
 
 router.get('/profilesetting', (req, res) => {
     res.render('profilesetting');
+});
     
 module.exports = router;
