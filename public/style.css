@@ -1,15 +1,16 @@
-.navbar-brand {
-    margin-left: 400px;
-}
-
 .description {
     font-weight: bold;
 }
 
-.nav-item {
-    margin-right: 20px;
-}
-
 .nav-item1 {
     margin-right: 100px;
+}
+
+.nav-item1 a {
+    color: lightslategray;
+}
+
+.nav-item1 a:hover {
+    padding-top: 10px;
+    color: rgb(69, 77, 87);
 }
