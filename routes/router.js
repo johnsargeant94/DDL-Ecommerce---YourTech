@@ -90,6 +90,7 @@ router.get('/logout', (req, res) => {
 router.get('/admin', checkSignedIn, async (req, res) => {
     let products = await ProductModel.find({});
     products = products.map(product => product.toObject());
+    console.log(products)
     res.render('admin', {products});
 });
 
@@ -134,9 +135,8 @@ router.get('/Mobile-Phones', (req, res) => {
     res.render('Mobile-Phones');
 });
 
-
-router.get('/profilesetting', (req, res) => {
-    res.render('profilesetting');
+router.get('/Tablet', (req, res) => {
+    res.render('Tablet');
 });
 
 router.get('/updateprofile', (req, res) => {
@@ -147,9 +147,8 @@ router.get('/orderlist', (req, res) => {
     res.render('orderlist');
 });
 
-
-
-
-
-
+router.get('/profilesetting', (req, res) => {
+    res.render('profilesetting');
+});
+    
 module.exports = router;
