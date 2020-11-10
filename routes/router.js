@@ -136,10 +136,15 @@ router.get('/Laptop', async (req, res) => {
     products = products.map(product => product.toObject());
     res.render('Laptop', {products});
 });
-
-router.get('/Watch', (req, res) => {
-    res.render('Watch');
+router.get('/Watch', async (req, res) => {
+    let products = await ProductModel.find({category: 'Watch'});
+    // products = products.toObject();]
+    console.log(products)
+    products = products.map(product => product.toObject());
+    res.render('watch', {products});
 });
+
+
 
 router.get('/Accessories', (req, res) => {
     res.render('Accessories');
@@ -154,6 +159,13 @@ router.get('/Mobile-Phones', async (req, res) => {
     res.render('Mobile-Phones', {products});
 });
 
+router.get('/Tv', async (req, res) => {
+    let products = await ProductModel.find({category: 'TV'});
+    // products = products.toObject();]
+    console.log(products)
+    products = products.map(product => product.toObject());
+    res.render('Tv', {products});
+});
 router.get('/Tablet', (req, res) => {
     res.render('Tablet');
 });
@@ -169,6 +181,7 @@ router.get('/orderlist', (req, res) => {
 router.get('/profilesetting', (req, res) => {
     res.render('profilesetting');
 });
+
 
 
 
