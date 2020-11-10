@@ -136,6 +136,7 @@ router.get('/Laptop', async (req, res) => {
     products = products.map(product => product.toObject());
     res.render('Laptop', {products});
 });
+
 router.get('/Watch', async (req, res) => {
     let products = await ProductModel.find({category: 'Watch'});
     // products = products.toObject();]
@@ -146,17 +147,29 @@ router.get('/Watch', async (req, res) => {
 
 
 
-router.get('/Accessories', (req, res) => {
-    res.render('Accessories');
-});
-
-
 router.get('/Mobile-Phones', async (req, res) => {
     let products = await ProductModel.find({category: 'Mobile phones'});
     // products = products.toObject();]
     console.log(products)
     products = products.map(product => product.toObject());
     res.render('Mobile-Phones', {products});
+});
+
+
+router.get('/Tablet', async (req, res) => {
+    let products = await ProductModel.find({category: 'Tablet'});
+    // products = products.toObject();]
+    console.log(products)
+    products = products.map(product => product.toObject());
+    res.render('Tablet', {products});
+});
+
+router.get('/Accessories', async (req, res) => {
+    let products = await ProductModel.find({category: 'Accessories'});
+    // products = products.toObject();]
+    console.log(products)
+    products = products.map(product => product.toObject());
+    res.render('Accessories', {products});
 });
 
 router.get('/Tv', async (req, res) => {
