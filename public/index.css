@@ -1,0 +1,9 @@
+footer .credibility {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        color: #b2b2b2;
+        width: 40%;
+        font-size: 15px;
+        list-style-type: none;
+}

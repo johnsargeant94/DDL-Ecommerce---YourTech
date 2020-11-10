@@ -1,6 +1,7 @@
     <!-- Navbar -->
     <head>
     <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
   </head>
 
   <main>
@@ -25,12 +26,14 @@
      
       <li class="nav-item">
         <a href="/" class="nav-link waves-effect">
+        <i class="fas fa-shopping-cart"></i>
           Shop
         </a>
       </li>
       <li class="nav-item">
         <a href="/basket" class="nav-link waves-effect">
-          basket <span class="basketNum">0</span>
+        <i id="basket" class="fas fa-shopping-basket"></i>
+          Basket <span class="basketNum">0</span>
         </a>
       </li>
       
@@ -38,11 +41,13 @@
       
       <li class="nav-item">
         <a href="/profile" class="nav-link waves-effect">
+        <i class="fas fa-user"></i>
           Profile
         </a>
       </li>
       <li class="nav-item">
         <a href="/admin" class="nav-link waves-effect">
+        <i class="fas fa-user-cog"></i>
           Admin
         </a>
       </li>
@@ -53,6 +58,7 @@
     {{else}}
          <li class="nav-item">
         <a href="/login" class="nav-link waves-effect">
+        <i class="fas fa-sign-in-alt"></i>
           Login
         </a>
       </li>

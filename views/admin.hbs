@@ -1,10 +1,11 @@
 <section class="jumbotron text-center">
   <div class="container">
-    <h1>Admin Page</h1>
+    <h1>Admin</h1>
+    <h4>Welcome to the Admin page.</h4>
   </div>
 </section>
 
-<h1>Create Product</h1>
+<h1>Add a Product</h1>
 
 <form action="/" method="POST">
   <div class="form-row">
@@ -27,20 +28,20 @@
     <div class="col-sm-10">
       <input type="text" name="image">
     </div>
-      <label class="col-sm-2 col-form-label" for="category">Choose a Category:</label >
+      <label class="col-sm-2 col-form-label" for="category">Category:</label >
     <div class="col-sm-3">
       <select id="category" name="category" class="form-control">
         <option value="Desktop">Desktop</option>
         <option value="Laptop">Laptop</option>
-        <option value="TV">TV</option>
-        <option value="Watch">Watch</option>
+        <option value="Mobile phones">Mobile Phone</option>
+        <option value="Watch">Smart watch</option>
         <option value="Accessories">Accessories</option>
-           <option value="Mobile phones">Mobile phones</option>
+        
         
       </select>
     </div>
     <div class="col-sm-10">
-    <button type="submit" class="btn btn-primary" name="create">Sign in</button>
+    <button type="submit" class="btn btn-primary" name="create">Add</button>
     </div>
   </div>
 </form>
@@ -54,12 +55,12 @@
   <thead>
     <tr>
       <th scope="col">ID</th>
-      <th scope="col">Name</th>
+      <th scope="col">Product</th>
       <th scope="col">Price</th>
-      <th scope="col">instock</th>
-      <th scope="col">image</th>
+      <th scope="col">Stock</th>
+      <th scope="col">Image</th>
       <th scope="col">Category</th>
-      <th scope="col">timeUploaded</th>
+      <th scope="col">Time Uploaded</th>
 
     </tr>
   </thead>
