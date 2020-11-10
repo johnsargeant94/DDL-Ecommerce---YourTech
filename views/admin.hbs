@@ -36,7 +36,10 @@
         <option value="Mobile phones">Mobile Phone</option>
         <option value="Watch">Smart watch</option>
         <option value="Accessories">Accessories</option>
-        
+
+         <option value="Tablet">Tablet</option>
+           <option value="Mobile phones">Mobile phones</option>
+
         
       </select>
     </div>
@@ -74,6 +77,37 @@
       <td>{{this.image}}</td>
       <td>{{this.category}}</td>
       <td>{{this.timeUploaded}}</td>
+      <td><button type="button" class="btn btn-indigo btn-sm m-0">Edit</button></td>
+      <td><button type="button" class="btn btn-indigo btn-sm m-0">Delete</button></td>
+    </tr>
+    {{/each}}
+
+  </tbody>
+</table>
+
+<table class="table table-striped">
+  <thead>
+    <tr>
+      <th scope="col">ID</th>
+      <th scope="col">Name</th>
+      <th scope="col">Age</th>
+      <th scope="col">Email</th>
+      <th scope="col">Phone Number</th>
+      <th scope="col">password</th>
+     
+
+    </tr>
+  </thead>
+  <tbody>
+    {{#each user}}
+    <tr>
+      <th scope="row">{{this._id}}</th>
+      <td>{{this.name}}</td>
+      <td>{{this.age}}</td>
+      <td>{{this.email}}</td>
+      <td>{{this.phoneNumber}}</td>
+      <td>{{this.password}}</td>
+     
       <td><button type="button" class="btn btn-indigo btn-sm m-0">Edit</button></td>
       <td><button type="button" class="btn btn-indigo btn-sm m-0">Delete</button></td>
     </tr>

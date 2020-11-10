@@ -7,7 +7,13 @@ const user = new Schema({
     email: {type: String, required: true, unique: true},
     phoneNumber: {type: String, required: false, unique: true},
     password: {type: String, required: true}
-});
+}, {
+    toObject: {
+        virtuals: true
+        }
+}
+
+);
 
 user.statics.checkExists = async function (email, phoneNumber) {
     const exists = await this.exists({$or: [{email}, {phoneNumber}]});
