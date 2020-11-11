@@ -9,6 +9,17 @@ BasketRoute.get('/basket', (req, res) => {
     res.render('basket');
 });
 
+BasketRoute.get('/basket', async (req, res) => {
+    res.send('Items in Basket');
+});
+
+BasketRoute.put('/update', async (req, res) => {
+    res.send('Order updated')
+});
+
+BasketRoute.delete('/delete', async(req, res) => {
+    res.send('Items deleted')
+})
 
 BasketRoute.get('/success', (req, res) => {
     res.render('success');
