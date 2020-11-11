@@ -2,115 +2,30 @@
   <link rel="stylesheet" href="index.css">
   <script src="https://kit.fontawesome.com/a076d05399.js"></script>
 </head>
+
 <body>
-  
-
-<main role="main">
-
-  <section class="jumbotron text-center">
-    <div class="container">
-      <h1>Shop</h1>
-      <p class="lead text-muted">Best Deals on Tech from Phones to laptops, shop below to see the content.</p>
-      <br>
-    </div>
-    {{> categoryNav}}
-  </section>
-
-  <script src="https://js.stripe.com/v3/"></script>
-
-  <div class="container">
-    <div class="row row-cols-3">
-
-      {{#each products}}
-      <div class="col">
-    
 
 
-        <div class="product">
-          <img src="{{this.image}}" alt="" srcset="" width="300" height="225">
-        </div>
-        <div class="description">
-          <p>{{this.name}}</p>
-          <p>£{{this.price}}</p>
-        </div>
+  <main role="main">
 
-        <p>Quantity:{{this.inStock}}</p>
-        <div class="btn-group">
-          <button type="button" class="btn btn-sm btn-outline-secondary" id="checkout-button">Buy Now</button>
-        </div>
-        <div class="btn-group">
-          <button type="button" class="btn btn-sm btn-outline-primary" id="basketBTN" onclick="addToBasket(event)" data-id = "{{this._id}}">Basket</button>
-        </div>
+    <section class="jumbotron text-center">
+      <div class="container">
+        <h1>Shop</h1>
+        <p class="lead text-muted">Best Deals on Tech from Phones to laptops, shop below to see the content.</p>
+        <br>
       </div>
-      {{/each}}
+      {{> categoryNav}}
+    </section>
 
-    </div>
-  </div>
-
-
-</main>
+    <script src="https://js.stripe.com/v3/"></script>
 
 
-<footer>
-  <div class="card">
-    <div class="card-header">
-      <div class="card-body">
-      <blockquote class="blockquote mb-0">
-        <img src="Yourtech.png" height="75" alt="mdb logo">
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.</p>
-        <footer class="blockquote-footer">Someone famous in <cite title="Source Title">Source Title</cite></footer>
-      </blockquote>
-    </div>
 
-       
-       <ul class="credibility">
-      <li class="text">&copy; 2020 YourTech</li>
-      <li class="text">Privacy Policy</li>
-      <li class="text">Terms of Use</li>
-    </ul>
-    </div>
-    
-  </div>
-</footer>
+
+
 </body>
 
-<br>
-<footer>
-  <div class="card">
-    <div class="card-header">
-      <div class="card-body">
-      <blockquote class="blockquote mb-0">
-        <ul class="credibility">
-         <img src="Yourtech.png" height="75" alt="mdb logo">
-      <li class="text">&copy; 2020 YourTech</li>
-      <li class="text">Privacy Policy</li>
-      <li class="text">Terms of Use</li>
-    </ul>
-        <p></p>
-        
-      </blockquote>
-    </div>
 
-       
-       
-
-    <ul class="payment-methods">
-      <li class="text">Accepted payment methods</li>
-       <span style="font-size: 30px;">
-      <i class="fab fa-cc-visa"></i>
-      </span>
-      <span style="font-size: 30px;">
-      <i class="fab fa-cc-apple-pay"></i>
-      </span>
-      <span style="font-size: 30px;">
-      <i class="fab fa-cc-paypal"></i>
-      </span>
-    </ul>
-    </div>
-    
-  </div>
-</footer>
-</body>
 
 <script type="text/javascript">
   // Create an instance of the Stripe object with your publishable API key
