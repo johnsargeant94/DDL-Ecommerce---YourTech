@@ -18,6 +18,26 @@ AdminRoute.get('/admin', checkSignedIn, async (req, res) => {
     res.render('admin', {products});
 });
 
+// Posting Products using Form in admin page
+AdminRoute.post('/', checkSignedIn, async (req, res) => {
+    const {name, price, inStock, image, category} = req.body;
+
+    const product = new ProductModel({
+            name: name,
+            price: price,
+            inStock: inStock,
+            image: image,
+            category: category,
+            timeUploaded: Date.now()
+    });
+    product.save().then(() => {
+        res.render('admin', {success: 'success!'});
+        return
+    }).catch((err) => {
+        res.render('admin', {err})
+    });
+})
+
 
 
 module.exports = AdminRoute;

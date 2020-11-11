@@ -30,8 +30,6 @@ const BasketRoute = require('./routes/BasketRoute');
 const ProductRoute = require('./routes/ProductRoute');
 
 
-
-
 mongoose.connect(url, {
     useNewUrlParser: true,
     useUnifiedTopology: true
@@ -79,27 +77,6 @@ app.use('/', AdminRoute);
 app.use('/', ProfileRoute);
 app.use('/', BasketRoute);
 app.use('/', ProductRoute);
-
-
-// Posting Products using Form in admin page
-app.post('/', async (req, res) => {
-    const {name, price, inStock, image, category} = req.body;
-
-    const product = new ProductModel({
-            name: name,
-            price: price,
-            inStock: inStock,
-            image: image,
-            category: category,
-            timeUploaded: Date.now()
-    });
-    product.save().then(() => {
-        res.render('admin', {success: 'success!'});
-        return
-    }).catch((err) => {
-        res.render('admin', {err})
-    });
-})
 
 
 app.post('/create-session', async (req, res) => {
