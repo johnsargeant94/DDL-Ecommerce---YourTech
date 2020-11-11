@@ -18,14 +18,17 @@ const stripe = require('stripe')(secretKey);
 const YOUR_DOMAIN = 'http://localhost:3000';
 
 
-
 // Model
 const SessionModel = require('./models/sessionModel');
 const ProductModel = require('./models/productModel');
 
 // Routes
 const router = require('./routes/router');
-// const productRouter = require('./routes/productRouter');
+const AdminRoute = require('./routes/AdminRoute');
+const ProfileRoute = require('./routes/ProfileRoute');
+const BasketRoute = require('./routes/BasketRoute');
+const ProductRoute = require('./routes/ProductRoute');
+
 
 
 
@@ -61,6 +64,7 @@ app.use(session({
     }
 }));
 
+
 app.use(async (req, res, next) => {
     let loggedIn = await SessionModel.checkSession(req.session.userID);
 
@@ -69,14 +73,15 @@ app.use(async (req, res, next) => {
     return next();
 });
 
+// Use Routes
 app.use('/', router);
-// app.use('/products', productRouter)
-
+app.use('/', AdminRoute);
+app.use('/', ProfileRoute);
+app.use('/', BasketRoute);
+app.use('/', ProductRoute);
 
 
 // Posting Products using Form in admin page
-
-
 app.post('/', async (req, res) => {
     const {name, price, inStock, image, category} = req.body;
 
@@ -95,6 +100,7 @@ app.post('/', async (req, res) => {
         res.render('admin', {err})
     });
 })
+
 
 app.post('/create-session', async (req, res) => {
     const session = await stripe.checkout.sessions.create({
