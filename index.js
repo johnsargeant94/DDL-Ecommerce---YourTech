@@ -39,12 +39,15 @@ const app = express();
 
 app.use(express.static(path.join(__dirname, 'public'))); //for css and photos front-end
 
+
 app.engine('.hbs', hbs({
     defaultLayout: 'layout',
     extname: '.hbs'
 }));
 
 app.set('view engine', '.hbs');
+
+
 
 
 app.use(bodyParser.urlencoded({extended: false}));

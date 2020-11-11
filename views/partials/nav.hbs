@@ -1,81 +1,104 @@
-    <!-- Navbar -->
-    <head>
-    <link rel="stylesheet" href="style.css">
-    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
-  </head>
-
-  <main>
-<nav class="navbar navbar-expand-md navbar-light">
-
-  <a class="navbar-brand" href="/">
-    <img src="Yourtech.png" height="90" alt="mdb logo">
-  </a>
-
-  <!-- Collapse button -->
-  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#basicExampleNav11"
-    aria-controls="basicExampleNav11" aria-expanded="false" aria-label="Toggle navigation">
-    <span class="navbar-toggler-icon"></span>
-  </button>
-
-
-  <!-- Links -->
-  <div class="collapse navbar-collapse" id="basicExampleNav11">
-
-    <!-- Right -->
-    <ul class="navbar-nav ml-auto">
-     
-      <li class="nav-item">
-        <a href="/" class="nav-link waves-effect">
-        <i class="fas fa-shopping-cart"></i>
-          Shop
-        </a>
-      </li>
-      <li class="nav-item">
-        <a href="/basket" class="nav-link waves-effect">
-        <i id="basket" class="fas fa-shopping-basket"></i>
-          Basket <span class="basketNum">0</span>
-        </a>
-      </li>
-      
-    {{#if loggedIn}}
-      
-      <li class="nav-item">
-        <a href="/profile" class="nav-link waves-effect">
-        <i class="fas fa-user"></i>
-          Profile
-        </a>
-      </li>
-      <li class="nav-item">
-        <a href="/admin" class="nav-link waves-effect">
-        <i class="fas fa-user-cog"></i>
-          Admin
-        </a>
-      </li>
-      <li class="nav-item pl-2 mb-2 mb-md-0">
-        <a class="logout" href="/logout" type="button"
-          class="btn btn-outline-info btn-md btn-rounded btn-navbar waves-effect waves-light">Logout</a>
-      </li>
-    {{else}}
-         <li class="nav-item">
-        <a href="/login" class="nav-link waves-effect">
-        <i class="fas fa-sign-in-alt"></i>
-          Login
-        </a>
-      </li>
-      <li class="nav-item pl-2 mb-2 mb-md-0">
-        <a href="/signup" type="button"
-          class="btn btn-outline-info btn-md btn-rounded btn-navbar waves-effect waves-light">Signup</a>
-      </li>
-    {{/if}}
-    </ul>
-
-  </div>
-  <!-- Links -->
-
-</nav>
 <!-- Navbar -->
-    
-    {{!-- <ul>
+
+<head>
+  <link rel="stylesheet" href="style.css">
+  <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+</head>
+
+<main>
+  <nav class="navbar navbar-expand-md navbar-light">
+
+    <a class="navbar-brand" href="/">
+      <img src="Yourtech.png" height="90" alt="mdb logo">
+    </a>
+
+    <!-- Collapse button -->
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#basicExampleNav11"
+      aria-controls="basicExampleNav11" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+
+    <!-- Links -->
+    <div class="collapse navbar-collapse" id="basicExampleNav11">
+
+      <!-- Right -->
+      <ul class="navbar-nav ml-auto">
+
+        <li class="nav-item">
+          <a href="/" class="nav-link waves-effect">
+            <i class="fas fa-shopping-cart"></i>
+            Shop
+          </a>
+        </li>
+
+
+
+
+        {{!-- --------------------------------------------------------------------------------------------------- --}}
+
+        <nav class="navbar navbar-inverse bg-inverse fixed-top bg-faded">
+          <div class="row">
+            <div class="col">
+              <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#cart">Basket (<span
+                  class="total-count"></span>)</button>
+            </div>
+          </div>
+        </nav>
+
+
+        <li class="nav-item">
+          <a href="/basket" class="nav-link waves-effect">
+            <i id="basket" class="fas fa-shopping-basket"></i>
+            Basket <span class="basketNum">0</span>
+          </a>
+        </li>
+
+
+        {{!-- ---------------------------------------------------------------------------------------------------- --}}
+
+
+
+
+        {{#if loggedIn}}
+
+        <li class="nav-item">
+          <a href="/profile" class="nav-link waves-effect">
+            <i class="fas fa-user"></i>
+            Profile
+          </a>
+        </li>
+        <li class="nav-item">
+          <a href="/admin" class="nav-link waves-effect">
+            <i class="fas fa-user-cog"></i>
+            Admin
+          </a>
+        </li>
+        <li class="nav-item pl-2 mb-2 mb-md-0">
+          <a class="logout" href="/logout" type="button"
+            class="btn btn-outline-info btn-md btn-rounded btn-navbar waves-effect waves-light">Logout</a>
+        </li>
+        {{else}}
+        <li class="nav-item">
+          <a href="/login" class="nav-link waves-effect">
+            <i class="fas fa-sign-in-alt"></i>
+            Login
+          </a>
+        </li>
+        <li class="nav-item pl-2 mb-2 mb-md-0">
+          <a href="/signup" type="button"
+            class="btn btn-outline-info btn-md btn-rounded btn-navbar waves-effect waves-light">Signup</a>
+        </li>
+        {{/if}}
+      </ul>
+
+    </div>
+    <!-- Links -->
+
+  </nav>
+  <!-- Navbar -->
+
+  {{!-- <ul>
         
         <a href="/">Home</a>
         

@@ -22,7 +22,9 @@
           <p>Quantity:{{this.inStock}}</p>
           <p>£{{this.price}}</p>
           <div class="btn-group">
-            <button type="button" class="btn btn-sm btn-outline-secondary">Add to Basket</button>
+
+            <a href="#" data-name="{{this.name}}" data-price="{{this.price}}" class="add-to-cart btn btn-primary">Add to
+              cart</a>
           </div>
         </div>
         {{/each}}

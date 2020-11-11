@@ -14,6 +14,9 @@ ProductRoute.get('/Desktop', async (req, res) => {
 });
 
 
+
+
+
 ProductRoute.get('/Laptop', async (req, res) => {
     let products = await ProductModel.find({category: 'Laptop'});
     // products = products.toObject();]
