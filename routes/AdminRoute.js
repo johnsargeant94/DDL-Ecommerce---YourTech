@@ -18,6 +18,7 @@ AdminRoute.get('/admin', checkSignedIn, async (req, res) => {
     res.render('admin', {products});
 });
 
+
 // Posting Products using Form in admin page
 AdminRoute.post('/', checkSignedIn, async (req, res) => {
     const {name, price, inStock, image, category} = req.body;
@@ -37,6 +38,12 @@ AdminRoute.post('/', checkSignedIn, async (req, res) => {
         res.render('admin', {err})
     });
 })
+
+AdminRoute.delete('/admin/deleteProduct/', (req, res) => {
+    // const {id} = req.body
+      
+    // deleteOne({})
+    })
 
 
 
