@@ -1,3 +1,7 @@
+* {
+        font-family: 'Raleway', sans-serif;
+}
+
 footer .credibility {
         display: flex;
         align-items: center;
@@ -27,3 +31,12 @@ footer .payment-methods {
         margin: auto;
         position: relative;
     }
+
+.intro {
+        text-align: center;
+}
+
+.introtwo {
+        text-align: center;
+        color: rgb(26, 38, 194);
+}

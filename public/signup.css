@@ -1,0 +1,43 @@
+h1 {
+    text-align: center;
+}
+
+.name {
+    position: absolute;
+    top: 250px;
+    left: 707px;
+}
+
+.age {
+    position: absolute;
+    top: 250px;
+    left: 1007px;
+}
+
+.email {
+    position: absolute;
+    top: 330px;
+    left: 707px;
+}
+
+#emailHelp {
+    font-size: 12px;
+}
+
+.password {
+    position: absolute;
+    top: 330px;
+    left: 1007px;
+}
+
+.pnumber {
+    position: absolute;
+    top: 430px;
+    left: 707px;
+}
+
+#submit {
+    position: absolute;
+    top: 455px;
+    left: 1050px;
+}
