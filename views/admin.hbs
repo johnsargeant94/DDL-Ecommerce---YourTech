@@ -39,18 +39,73 @@
 
         <option value="Tablet">Tablet</option>
         <option value="Mobile phones">Mobile phones</option>
-
-
       </select>
+
+      <div class="col-sm-10">
+        <button type="submit" class="btn btn-primary" name="create">Add</button>
+      </div>
     </div>
-    <div class="col-sm-10">
-      <button type="submit" class="btn btn-primary" name="create">Add</button>
-    </div>
-  </div>
 </form>
 </div>
 <p>{{success}}</p>
 <p>{{err}}</p>
+
+<h1>Create User</h1>
+
+<form action="/admin" method="post">
+
+  <div class="name">
+    <label for="name">Name</label>
+    <br>
+    <input type="text" name="userName" size="30">
+  </div>
+
+  <div class="email">
+    <label for="email">Email address</label>
+    <br>
+    <input type="email" name="email" size="30">
+    <br>
+    <small id="emailHelp">We'll never share your email with anyone
+      else.
+    </small>
+  </div>
+
+  <div class="password">
+    <label for="password">Password</label>
+    <br>
+    <input type="password" name="password">
+  </div>
+
+
+  <div class="age">
+    <label for="age">Age</label>
+    <br>
+    <input type="number" min="0" name="age">
+  </div>
+
+  <div class="pnumber">
+    <label for="phonenumber">Phone Number</label>
+    <br>
+    <input type="tel" name="phoneNumber" size="30">
+  </div>
+
+  </div>
+  <label class="col-sm-2 col-form-label" for="role">Role:</label>
+  <div class="col-sm-3">
+    <select id="role" name="role" class="form-control">
+      <option value="Admin">Admin</option>
+      <option value="User">User</option>
+    </select>
+  </div>
+
+  <button id="submit" type="submit" value="login" class="btn btn-primary">Submit</button>
+
+</form>
+
+
+
+
+
 
 <h1>Products</h1>
 
@@ -77,10 +132,10 @@
       <td>{{this.image}}</td>
       <td>{{this.category}}</td>
       <td>{{this.timeUploaded}}</td>
-      <td><button id="deleteProductBTN" type="button" class="btn btn-indigo btn-sm m-0" onclick="editProduct(event)" data-id =
-          "{{this._id}}">Edit</button></td>
-      <td><button type="button" class="btn btn-indigo btn-sm m-0" onclick="deleteProduct(event)" data-id =
-          "{{this._id}}">Delete</button></td>
+      <td><button id="deleteProductBTN" type="button" class="btn btn-indigo btn-sm m-0" onclick="editProduct(event)"
+          data-id="{{this._id}}">Edit</button></td>
+      <td><button type="button" class="btn btn-indigo btn-sm m-0" onclick="deleteProduct(event)"
+          data-id="{{this._id}}">Delete</button></td>
     </tr>
     {{/each}}
 
@@ -117,4 +172,3 @@
 
   </tbody>
 </table>
-

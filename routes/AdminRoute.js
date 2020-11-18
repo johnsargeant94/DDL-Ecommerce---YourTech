@@ -20,8 +20,42 @@ AdminRoute.get('/admin', checkSignedIn, async (req, res) => {
 
 
 // Posting Products using Form in admin page
-AdminRoute.post('/', checkSignedIn, async (req, res) => {
-    const {name, price, inStock, image, category} = req.body;
+AdminRoute.post('/admin', checkSignedIn, async (req, res) => {
+   //Creating User
+    const {userName, email, age, phoneNumber, password, role} = req.body;
+
+    if (!userName || !email || !age || !password) {
+        res.render('signup',{err:'Missing reuqired information'});
+        return;
+    }
+
+    if (await UserModel.checkExists(email, phoneNumber)) {
+        res.render('signup',{err:'A user with this email or phone number already exists'});
+        return;
+    }
+
+    let hashedPassword = await UserModel.hashPassword(password);
+
+    const user = new UserModel({
+        name: userName,
+        age,
+        email,
+        phoneNumber,
+        password: hashedPassword,
+        role
+    });
+
+    user.save();
+
+    req.session.userID = nanoid();
+    req.session.save();
+
+    res.redirect('/admin');
+
+
+
+    //Create Product
+    const {name, price, inStock, image, category } = req.body;
 
     const product = new ProductModel({
             name: name,
