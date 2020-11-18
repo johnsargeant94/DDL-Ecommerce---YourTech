@@ -74,30 +74,38 @@
         checkoutButton.addEventListener("click", function () {
             let basketItems = document.getElementsByClassName("basketItems")
             let basketPrice = document.getElementsByClassName("basketPrice")
+            let quantity = document.getElementsByClassName("item-count form-control")
             let arr = []
 
-            for (item of basketItems, basketPrice) {
-                //Name
+            for (item of basketItems) {
+                //Name of products
                //console.log (item.firstChild.textContent);
+               console.log(item);
 
-               //Price
-               
-               console.log (item);
-
-               // get the name
             }
-               // get the quantity
-               //let quantity = data.
-               // get the price
-                //console.log(item);
-               /* arr.push(
+
+            for (item of basketPrice){
+                // Price of Products
+                console.log (item.firstChild.textContent)
+
+            }
+
+            for (item of quantity){
+                // Quanity of Products
+                console.log (item.value)
+
+            }
+
+             /*  
+               arr.push(
                     {
                         name,
                         price,
                         quantity
                     }
                 )
-            }*/
+            }
+            */
 
             
             /*fetch("/create-session", {
