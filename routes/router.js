@@ -42,7 +42,8 @@ router.post('/signup', async(req, res) => {
         age,
         email,
         phoneNumber,
-        password: hashedPassword
+        password: hashedPassword,
+        role: 'User'
     });
 
     user.save();
@@ -66,15 +67,24 @@ router.post('/login', async(req, res) => {
         return;
     }
 
-    if (await UserModel.comparePassword(email, password)) {
+    if (!await UserModel.comparePassword(email, password)) {
+        res.render('login', {err: 'You have eneterd the wrong password'});
 
-        req.session.userID = nanoid();
-        req.session.save();
-        res.redirect('/profile');
-        return;
     }
 
-    res.render('login', {err: 'You have eneterd the wrong password'});
+  
+        req.session.admin = await UserModel.checkIfAdmin(email)
+    
+    req.session.userID = nanoid();
+    req.session.save();
+    if (req.session.admin){
+    res.redirect('/admin');
+    }
+    else{
+        res.redirect('/profile');
+    }
+
+
 });
 
 

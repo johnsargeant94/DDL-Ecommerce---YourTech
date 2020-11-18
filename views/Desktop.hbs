@@ -72,7 +72,7 @@
     <div class="container">
       <div class="row row-cols-3">
         {{#each products}}
-        <div class="col" key={{this._id}}>
+        <div class="col" >
           <img src="{{this.image}}" alt="" srcset="" width="100%" height="225">
           <p>{{this.name}}</p>
           <p>Quantity:{{this.inStock}}</p>
@@ -81,7 +81,7 @@
           <div class="btn-group">
             <div class="btn-group">
             </div>
-            <a href="#" data-name="{{this.name}}" data-price="{{this.price}}" class="add-to-cart btn btn-primary">Add to
+            <a href="#" data-id="{{this._id}}" data-name="{{this.name}}" data-price="{{this.price}}" class="add-to-cart btn btn-primary">Add to
               cart</a>
           </div>
         </div>

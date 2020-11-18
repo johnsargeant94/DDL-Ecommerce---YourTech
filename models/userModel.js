@@ -40,6 +40,16 @@ user.statics.comparePassword = async function (email, attemptedPassword) {
     return result;
 }
 
+user.statics.checkIfAdmin = async function (email) {
+    let user = await this.findOne({email});
+
+    if (user.role == 'Admin') {
+        return true;
+    }
+    return false;
+}
+
+
 module.exports = model('users', user)
 
 

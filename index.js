@@ -68,7 +68,7 @@ app.use(session({
 
 app.use(async (req, res, next) => {
     let loggedIn = await SessionModel.checkSession(req.session.userID);
-
+    console.log(req.session)
     res.locals.loggedIn = loggedIn;
 
     return next();
@@ -91,7 +91,6 @@ app.post('/create-session', async (req, res) => {
             currency: 'GBP',
             product_data: {
               name: 'Stubborn Attachments',
-              images: ['https://i.imgur.com/EHyR2nP.png'],
             },
             unit_amount: 2000,
           },

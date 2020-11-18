@@ -2,11 +2,11 @@ const {nanoid} = require('nanoid');
 const AdminRoute = require('express').Router();
 const ProductModel = require('../models/productModel');
 const UserModel = require('../models/userModel');
-const {checkSignedIn} = require('../controllers/auth');
+const {checkAdminLoggedIn} = require('../controllers/auth');
 const sessionModel = require('../models/sessionModel');
 
 
-AdminRoute.get('/admin', checkSignedIn, async (req, res) => {
+AdminRoute.get('/admin', checkAdminLoggedIn, async (req, res) => {
     let products = await ProductModel.find({});
     products = products.map(product => product.toObject());
     // console.log(products)
@@ -20,8 +20,9 @@ AdminRoute.get('/admin', checkSignedIn, async (req, res) => {
 
 
 // Posting Products using Form in admin page
-AdminRoute.post('/admin', checkSignedIn, async (req, res) => {
-   //Creating User
+AdminRoute.post('/admin', checkAdminLoggedIn, async (req, res) => {
+  
+    //Creating User
     const {userName, email, age, phoneNumber, password, role} = req.body;
 
     if (!userName || !email || !age || !password) {
