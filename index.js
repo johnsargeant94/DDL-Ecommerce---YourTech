@@ -68,8 +68,9 @@ app.use(session({
 
 app.use(async (req, res, next) => {
     let loggedIn = await SessionModel.checkSession(req.session.userID);
-    console.log(req.session)
+    console.log(req.session.admin)
     res.locals.loggedIn = loggedIn;
+    res.locals.admin = req.session.admin; 
 
     return next();
 });

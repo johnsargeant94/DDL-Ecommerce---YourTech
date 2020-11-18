@@ -166,7 +166,7 @@ var shoppingCart = (function() {
         + "<button class='plus-item btn btn-primary input-group-addon' data-name=" + cartArray[i].name + ">+</button></div></td>"
         + "<td><button class='delete-item btn btn-danger' data-name=" + cartArray[i].name + ">X</button></td>"
         + " = " 
-        + "<td>£" + cartArray[i].total + "</td>" 
+        + "<td class='basketPrice'>£" + cartArray[i].total + "</td>" 
         +  "</tr>";
     }
     $('.show-cart').html(output);

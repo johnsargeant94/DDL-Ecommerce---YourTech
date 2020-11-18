@@ -47,16 +47,20 @@
             Profile
           </a>
         </li>
+          {{#if admin}}
         <li class="nav-item">
           <a href="/admin" class="nav-link waves-effect">
             <i class="fas fa-user-cog"></i>
             Admin
           </a>
         </li>
+        {{/if}}
+        
         <li class="nav-item pl-2 mb-2 mb-md-0">
           <a class="logout" href="/logout" type="button"
             class="btn btn-outline-info btn-md btn-rounded btn-navbar waves-effect waves-light">Logout</a>
         </li>
+        
         {{else}}
         <li class="nav-item">
           <a href="/login" class="nav-link waves-effect">
@@ -68,7 +72,9 @@
           <a href="/signup" type="button"
             class="btn btn-outline-info btn-md btn-rounded btn-navbar waves-effect waves-light">Signup</a>
         </li>
+      
         {{/if}}
+        
       </ul>
 
     </div>

@@ -73,25 +73,31 @@
         var checkoutButton = document.getElementById("checkout-button");
         checkoutButton.addEventListener("click", function () {
             let basketItems = document.getElementsByClassName("basketItems")
+            let basketPrice = document.getElementsByClassName("basketPrice")
             let arr = []
 
-            for (item of basketItems) {
+            for (item of basketItems, basketPrice) {
+                //Name
+               //console.log (item.firstChild.textContent);
+
+               //Price
+               
+               console.log (item);
 
                // get the name
-               //let name = basketItems.dataset.name
+            }
                // get the quantity
-               //console.log (name)
                //let quantity = data.
                // get the price
-                console.log(item);
-                arr.push(
+                //console.log(item);
+               /* arr.push(
                     {
                         name,
                         price,
                         quantity
                     }
                 )
-            }
+            }*/
 
             
             /*fetch("/create-session", {
