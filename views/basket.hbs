@@ -75,28 +75,28 @@
             let basketItems = document.getElementsByClassName("basketItems")
             let basketPrice = document.getElementsByClassName("basketPrice")
             let quantity = document.getElementsByClassName("item-count form-control")
-            let arr = []
+           let arr = []
 
             for (item of basketItems) {
                 //Name of products
-               //console.log (item.firstChild.textContent);
-               console.log(item);
+               name = item.firstChild.textContent
+               console.log(name)
 
             }
 
             for (item of basketPrice){
-                // Price of Products
-                console.log (item.firstChild.textContent)
+                price = item.firstChild.textContent
+                console.log(price)
 
             }
 
             for (item of quantity){
                 // Quanity of Products
-                console.log (item.value)
-
+                quantity = item.value
+                console.log(quantity)
             }
 
-             /*  
+              
                arr.push(
                     {
                         name,
@@ -105,15 +105,15 @@
                     }
                 )
             }
-            */
+            
 
             
-            /*fetch("/create-session", {
+            fetch("/create-session", {
                 method: "POST",
                 headers: {
                     'Content-Type': 'application/json'
                 },
-                body: JSON.stringify(arr)
+                //body: JSON.stringify(arr)
             })
                 .then(function (response) {
                     return response.json();
@@ -132,7 +132,7 @@
                 .catch(function (error) {
                     console.error("Error:", error);
                 });
-                */
+                
         }); 
 
     </script>
