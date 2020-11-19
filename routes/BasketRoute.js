@@ -1,8 +1,8 @@
-const {nanoid} = require('nanoid');
+const { nanoid } = require('nanoid');
 const BasketRoute = require('express').Router();
 const ProductModel = require('../models/productModel');
 const UserModel = require('../models/userModel');
-const {checkSignedIn} = require('../controllers/auth');
+const { checkSignedIn } = require('../controllers/auth');
 const sessionModel = require('../models/sessionModel');
 
 BasketRoute.get('/basket', (req, res) => {
@@ -17,7 +17,7 @@ BasketRoute.put('/update', async (req, res) => {
     res.send('Order updated')
 });
 
-BasketRoute.delete('/delete', async(req, res) => {
+BasketRoute.delete('/delete', async (req, res) => {
     res.send('Items deleted')
 })
 

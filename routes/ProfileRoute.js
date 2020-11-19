@@ -1,8 +1,8 @@
-const {nanoid} = require('nanoid');
+const { nanoid } = require('nanoid');
 const ProfileRoute = require('express').Router();
 const ProductModel = require('../models/productModel');
 const UserModel = require('../models/userModel');
-const {checkSignedIn} = require('../controllers/auth');
+const { checkSignedIn } = require('../controllers/auth');
 const sessionModel = require('../models/sessionModel');
 
 

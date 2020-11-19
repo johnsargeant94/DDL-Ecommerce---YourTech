@@ -14,9 +14,7 @@ const pubKey = process.env.Publishable_key
 const secretKey = process.env.Secret_key;
 // const Your_Domain = 'http://localhost:3000';
 const stripe = require('stripe')(secretKey);
-
 const YOUR_DOMAIN = 'http://localhost:3000';
-
 
 // Model
 const SessionModel = require('./models/sessionModel');
@@ -29,50 +27,44 @@ const ProfileRoute = require('./routes/ProfileRoute');
 const BasketRoute = require('./routes/BasketRoute');
 const ProductRoute = require('./routes/ProductRoute');
 
-
 mongoose.connect(url, {
-    useNewUrlParser: true,
-    useUnifiedTopology: true
+  useNewUrlParser: true,
+  useUnifiedTopology: true
 });
 
 const app = express();
 
 app.use(express.static(path.join(__dirname, 'public'))); //for css and photos front-end
 
-
 app.engine('.hbs', hbs({
-    defaultLayout: 'layout',
-    extname: '.hbs'
+  defaultLayout: 'layout',
+  extname: '.hbs'
 }));
 
 app.set('view engine', '.hbs');
 
-
-
-
-app.use(bodyParser.urlencoded({extended: false}));
+app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
 
 app.use(session({
-    store: new MongoStore({mongooseConnection: mongoose.connection}),
-    secret: 'keyboard cat',
-    resave: false,
-    saveUninitialized: false,
-    cookie: {
-        maxAge: 1000 * 60 * 60 * 2, // 2 hours
-        secure: false,
-        sameSite: true
-    }
+  store: new MongoStore({ mongooseConnection: mongoose.connection }),
+  secret: 'keyboard cat',
+  resave: false,
+  saveUninitialized: false,
+  cookie: {
+    maxAge: 1000 * 60 * 60 * 2, // 2 hours
+    secure: false,
+    sameSite: true
+  }
 }));
 
-
 app.use(async (req, res, next) => {
-    let loggedIn = await SessionModel.checkSession(req.session.userID);
-    console.log(req.session)
-    res.locals.loggedIn = loggedIn;
-    res.locals.admin = req.session.admin; 
+  let loggedIn = await SessionModel.checkSession(req.session.userID);
+  console.log(req.session)
+  res.locals.loggedIn = loggedIn;
+  res.locals.admin = req.session.admin;
 
-    return next();
+  return next();
 });
 
 // Use Routes
@@ -84,25 +76,25 @@ app.use('/', ProductRoute);
 
 
 app.post('/create-session', async (req, res) => {
-    const session = await stripe.checkout.sessions.create({
-      payment_method_types: ['card'],
-      line_items: [
-        {
-          price_data: {
-            currency: 'GBP',
-            product_data: {
-              name: 'Stubborn Attachments',
-            },
-            unit_amount: 2000,
+  const session = await stripe.checkout.sessions.create({
+    payment_method_types: ['card'],
+    line_items: [
+      {
+        price_data: {
+          currency: 'GBP',
+          product_data: {
+            name: 'Stubborn Attachments',
           },
-          quantity: 1,
+          unit_amount: 2000,
         },
-      ],
-      mode: 'payment',
-      success_url: `${YOUR_DOMAIN}/success`,
-      cancel_url: `${YOUR_DOMAIN}/cancel`,
-    });
-    res.json({ id: session.id });
+        quantity: 1,
+      },
+    ],
+    mode: 'payment',
+    success_url: `${YOUR_DOMAIN}/success`,
+    cancel_url: `${YOUR_DOMAIN}/cancel`,
   });
+  res.json({ id: session.id });
+});
 
 app.listen(process.env.PORT || '3000');
