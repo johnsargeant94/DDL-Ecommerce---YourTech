@@ -19,19 +19,12 @@
   box-shadow: 2px 5px 5px 0px #eee;
     max-width: 1100px;
     padding-top: 10px;
-    height: 700px;
+    height: 600px;
     margin-top: 30px;
-    margin-bottom: 35px;
+    margin-bottom: 130px;
 }
 /*--- for label of first and last name---*/
-.lastname{
-    margin-left: 350px;
-    font-family: sans-serif;
-    font-size: 14px;
-    color: rgb(15, 15, 15);
-    margin-top: 10px;
-    margin-bottom: 50px;
-}
+
 .firstname{
     margin-left: 350px;
     font-family: sans-serif;
@@ -40,16 +33,12 @@
     margin-top: 5px;
     margin-bottom: 50px;
 }
-#fname{
+#name{
     margin-top:5px;
-    margin-right: 100px;
-    margin-left: 20px;
+    margin-right: 80px;
+    margin-left: 60px;
 }
-#lname{
-    margin-top:5px;
-    margin-right: 100px;
-    margin-left: 20px;
-}
+
      
 
 /*---for heading-----*/
@@ -66,7 +55,7 @@
 #email{
      margin-top: 5px;
      margin-right: 80px;
-     margin-left: 55px;
+     margin-left: 60px;
 }
 /*-----------for Password--------*/
     /*-------label-----*/
@@ -89,15 +78,30 @@
 }
 #password{
 margin-top: 10px;
-margin-right: 90px;
-margin-left: 30px;
+margin-right: 100px;
+margin-left: 35px;
+
+}
+.Age{
+    color: rgb(15, 15, 15);
+    margin-top: 9px;
+    font-size: 14px;
+    font-family: sans-serif;
+    margin-left: 350px;
+    margin-top: 9px;
+    margin-bottom: 50px;
+}
+#age{
+margin-top: 10px;
+margin-right: 70px;
+margin-left: 70px;
 
 }
 /*------------for phone Number--------*/
      /*----------label--------*/
      #phonenumber{
         margin-top: 10px;
-        margin-right: 120px;
+        margin-right: 145px;
       
        
     }
@@ -111,33 +115,8 @@ margin-left: 30px;
         margin-bottom: 50px;
     }	
 
-/*--------------for Gender---------------*/
-    /*--------------label---------*/
-.gender {
-    color:  rgb(15, 15, 15);
-    font-family: sans-serif;
-    font-size: 14px;
-    margin-left: 350px;
-    margin-top: 8px;
-}
 
-    /*---------- for Input type--------*/
-.col-xs-4.male{
-    color:  rgb(15, 15, 15);
-    font-size: 13px;
-    margin-top: 9px;
-    padding-bottom: 16px;
-    margin-left: 50px;
-}
-.col-xs-4.female {
-    color:  rgb(15, 15, 15);
-    font-size: 13px;
-    margin-top: 9px;
-    margin-bottom: 20px;
-    padding-bottom: 16px;
-    padding-right: 95px;
-    margin-left: 30px;
-}	
+
 /*------------For submit button---------*/
 .sbutton{
     color:  rgb(15, 15, 15);
