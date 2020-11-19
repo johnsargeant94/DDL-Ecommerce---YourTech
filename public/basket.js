@@ -159,7 +159,7 @@ var shoppingCart = (function() {
     for(var i in cartArray) {
       output += "<tr class='basketItems'>"
         + "<td>" + cartArray[i].name + "</td>" 
-        + "<td>(£" + cartArray[i].price + ")</td>"
+        + "<td>£" + cartArray[i].price + "</td>"
         + "<td><div class='input-group'><button class='minus-item input-group-addon btn btn-primary' data-name=" + cartArray[i].name + ">-</button>"
         + "<input type='number' class='item-count form-control' data-name='" + cartArray[i].name + "' value='" + cartArray[i].count + "'>"
         + "<input type='hidden' value='"+ cartArray[i].id + "'>"

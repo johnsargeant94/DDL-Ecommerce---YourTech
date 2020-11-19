@@ -79,31 +79,19 @@
 
             for (item of basketItems) {
                 //Name of products
-               name = item.firstChild.textContent
-               console.log(name)
-
-            }
-
-            for (item of basketPrice){
-                price = item.firstChild.textContent
-                console.log(price)
-
-            }
-
-            for (item of quantity){
-                // Quanity of Products
-                quantity = item.value
-                console.log(quantity)
-            }
-
-              
-               arr.push(
+                let name = item.firstChild.textContent
+                let price = item.children[1].textContent
+                price = price.substring(1); 
+                let quantity = item.children[2].children[0].children[1].value
+                arr.push(
                     {
                         name,
                         price,
                         quantity
                     }
                 )
+               console.log(name, price, quantity)
+
             }
             
 
@@ -113,7 +101,7 @@
                 headers: {
                     'Content-Type': 'application/json'
                 },
-                //body: JSON.stringify(arr)
+                    body: JSON.stringify(arr)
             })
                 .then(function (response) {
                     return response.json();
@@ -132,7 +120,8 @@
                 .catch(function (error) {
                     console.error("Error:", error);
                 });
-                
+            
         }); 
+
 
     </script>

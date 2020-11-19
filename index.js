@@ -74,22 +74,32 @@ app.use('/', ProfileRoute);
 app.use('/', BasketRoute);
 app.use('/', ProductRoute);
 
-
-app.post('/create-session', async (req, res) => {
-  const session = await stripe.checkout.sessions.create({
-    payment_method_types: ['card'],
-    line_items: [
-      {
+const formatBasket = (basket) => {
+  let items = []
+  for (const item of basket) {
+    console.log(item)
+    items.push({
+          
         price_data: {
           currency: 'GBP',
           product_data: {
-            name: 'Stubborn Attachments',
+            name: item.name,
           },
-          unit_amount: 2000,
+          unit_amount: parseFloat(item.price*100),
         },
-        quantity: 1,
-      },
-    ],
+        quantity: parseFloat(item.quantity)
+      
+    })
+  }
+  return items
+}
+
+app.post('/create-session', async (req, res) => {
+  let items = formatBasket(req.body);
+  console.log(items)
+  const session = await stripe.checkout.sessions.create({
+    payment_method_types: ['card'],
+    line_items: items,
     mode: 'payment',
     success_url: `${YOUR_DOMAIN}/success`,
     cancel_url: `${YOUR_DOMAIN}/cancel`,

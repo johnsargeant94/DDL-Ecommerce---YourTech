@@ -47,6 +47,7 @@ router.post('/signup', async (req, res) => {
     user.save();
 
     req.session.userID = nanoid();
+    req.session.email = email
     req.session.save();
 
     res.redirect('/profile');
@@ -69,6 +70,7 @@ router.post('/login', async (req, res) => {
     req.session.admin = await UserModel.checkIfAdmin(email)
 
     req.session.userID = nanoid();
+    req.session.email = email;
     req.session.save();
     if (req.session.admin) {
         res.redirect('/admin');
