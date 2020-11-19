@@ -1,77 +1,87 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Signup</title>
-    <link rel="stylesheet" href="signup.css">
+    <link rel="stylesheet" href="/signup.css">
 </head>
 
 <body>
+ <div class="container">
+ <!---heading---->
 
-    <h1>Signup page</h1>
-   
-        <form action="/signup" method="post">
+     <header class="heading"> Sign up-Form</header><hr></hr>
+	<!---Form starting---->
+    <form action="/signup" method="post">
+	<div class="row ">
+	 <!--- For Name---->
+         <div class="col-sm-12">
+             <div class="row">
+			     <div class="col-xs-4">
+          	         <label class="firstname"> Name :</label> </div>
+		         <div class="col-xs-8">
+		             <input type="text" name="name" id="name" placeholder="Enter your Name" class="form-control ">
+             </div>
+		      </div>
+		 </div>
+		 
+		 
+         
+     <!-----For email---->
+		 <div class="col-sm-12">
+		     <div class="row">
+			     <div class="col-xs-4">
+		             <label class="mail" >Email :</label></div>
+			     <div class="col-xs-8"	>	 
+			          <input type="email" name="email"  id="email"placeholder="Enter your email" class="form-control" >
+		         </div>
+		     </div>
+		 </div>
+	 <!-----For Password and confirm password---->
+          <div class="col-sm-12">
+		         <div class="row">
+				     <div class="col-xs-4">
+		 	              <label class="pass">Password :</label></div>
+				  <div class="col-xs-8">
+			             <input type="password" name="password" id="password" placeholder="Enter your Password" class="form-control">
+				 </div>
+          </div>
+		  </div>
 
-            <div class="name">
-            <label for="name">Name</label>
-            <br>
-            <input type="text" name="name" size="30">
-            </div>
+          <div class="col-sm-12">
+		         <div class="row">
+				     <div class="col-xs-4">
+		 	              <label class="Age">Age :</label></div>
+				  <div class="col-xs-8">
+			             <input type="number" name="age" id="age" placeholder="Enter your Age" class="form-control">
+				 </div>
+          </div>
+		  </div>
+		  
+     <!-----------For Phone number-------->
+        <div class="col-sm-12">
+		         <div class="row">
+				     <div class="col-xs-4">
+		 	              <label class="phn">Phone Number :</label></div>
+				  <div class="col-xs-8">
+			             <input type="tel" name="phoneNumber" id="phonenumber" placeholder="Enter your Phone Number" class="form-control">
+				 </div>
+          </div>
+		  </div>
+         
+		    
+		     <div class="col-sm-12">
+		         <button id="submit" type="submit" value="login"class="btn btn-warning">Submit</button>
+                 
+		   </div>
+		 </div>
+	 </div>	 
+	</form>  		 
+		 
+</div>
 
-            <div class="email">
-            <label for="email">Email address</label>
-            <br>
-            <input type="email" name="email" size="30">
-            <br>
-            <small id="emailHelp">We'll never share your email with anyone
-            else.
-            </small>
-            </div>
-
-            <div class="password">
-            <label for="password">Password</label>
-            <br>
-            <input type="password" name="password">
-            </div>
-
-
-             <div class="age">
-            <label for="age">Age</label>
-            <br>
-            <input type="number" min="0" name="age">
-            </div>
-
-            <div class="pnumber">
-            <label for="phonenumber">Phone Number</label>
-            <br>
-            <input type="tel" name="phoneNumber" size="30">
-            </div>
-
-            <button id="submit" type="submit" value="login" class="btn btn-primary">Submit</button>
-
-            </form>
-
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-
-</body>
+</body>		
 
 </html>

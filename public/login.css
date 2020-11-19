@@ -1,11 +1,19 @@
 
-@media (min-width: 768px) {
+@media (min-width: 730px) {
     .omb_row-sm-offset-3 div:first-child[class*="col-"] {
         margin-left: 25%;
     }
 }
 .omb_login{
-    background-color: rgb(175, 210, 219);
+	
+		background-image:url(https://image.shutterstock.com/image-vector/futuristic-clean-technology-concept-white-260nw-1114517270.jpg);
+		background-repeat:no-repeat;
+		background-size:cover;
+		
+		height:50%;
+		
+		
+   
 }
 .omb_login .omb_authTitle {
     text-align: center;
@@ -21,9 +29,23 @@
     color: white;
 	opacity:1;    	
 }
-.omb_login .omb_socialButtons .omb_btn-facebook {background: #3b5998;}
-.omb_login .omb_socialButtons .omb_btn-twitter {background: #00aced;}
-.omb_login .omb_socialButtons .omb_btn-google {background: #c32f10;}
+.omb_login .omb_socialButtons .omb_btn-facebook 
+{
+
+background: #3b5998; 
+height: 2cm;
+}
+.omb_login .omb_socialButtons .omb_btn-twitter 
+{
+
+background: #00aced;
+height: 2cm;
+}
+.omb_login .omb_socialButtons .omb_btn-google 
+{
+background: #c32f10; 
+height: 2cm;
+}
 
 
 .omb_login .omb_loginOr {
