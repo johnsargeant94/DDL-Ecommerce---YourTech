@@ -12,7 +12,7 @@ AdminRoute.get('/admin', checkAdminLoggedIn, async (req, res) => {
 
     let user = await UserModel.find({});
     user = user.map(user => user.toObject());
-    console.log(user)
+    //console.log(user)
 
     res.render('admin', { products });
 });

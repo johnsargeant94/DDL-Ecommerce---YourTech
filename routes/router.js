@@ -71,6 +71,7 @@ router.post('/login', async (req, res) => {
 
     req.session.userID = nanoid();
     req.session.email = email;
+    console.log(req.session.email)
     req.session.save();
     if (req.session.admin) {
         res.redirect('/admin');
