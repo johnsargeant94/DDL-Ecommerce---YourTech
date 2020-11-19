@@ -1,52 +1,92 @@
-<div class="container">
-    <div class="row align-items-start">
-        <div class="col">
-        </div>
-        <div class="col">
-            <h1>Login Page</h1>
-        </div>
-        <div class="col">
-        </div>
-    </div>
-    <div class="row align-items-center">
-        <div class="col">
-        </div>
-        <div class="col">
-            <form action="/login" method="post">
-                <div class="form-group">
-                    <label for="exampleInputEmail1">Email address</label>
-                    <input type="email" name="email" class="form-control" id="exampleInputEmail1"
-                        aria-describedby="emailHelp">
-                    <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone
-                        else.</small>
-                </div>
-                <div class="form-group">
-                    <label for="exampleInputPassword1">Password</label>
-                    <input type="password" name="password" class="form-control" id="exampleInputPassword1">
-                </div>
-                <button type="submit" value="login" class="btn btn-primary">Submit</button>
-            </form>
-        </div>
-        <div class="col">
-        </div>
-    </div>
-    <div class="row align-items-end">
-        <div class="col">
-        </div>
-        <div class="col">
-            <p class="error">{{err}}</p>
-        </div>
-        <div class="col">
-        </div>
-    </div>
-</div>
+<link rel="stylesheet" href="/login.css">
 
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
+<div class="container">
+    <div class="omb_login">
+        <h3 class="omb_authTitle">Login or <a href="/signup">Sign up</a></h3>
+        <div class="row omb_row-sm-offset-3 omb_socialButtons">
+            <div class="col-xs-4 col-sm-2">
+                <a href="https://www.facebook.com/campaign/landing.php?&campaign_id=1547099255&extra_1=s%7Cc%7C293748438954%7Ce%7Cfacebook%20sign%20up%7C&placement=&creative=293748438954&keyword=facebook%20sign%20up&partner_id=googlesem&extra_2=campaignid%3D1547099255%26adgroupid%3D55741560941%26matchtype%3De%26network%3Dg%26source%3Dnotmobile%26search_or_content%3Ds%26device%3Dc%26devicemodel%3D%26adposition%3D%26target%3D%26targetid%3Dkwd-5066597374%26loc_physical_ms%3D9073591%26loc_interest_ms%3D%26feeditemid%3D%26param1%3D%26param2%3D&gclid=CjwKCAiAzNj9BRBDEiwAPsL0d6Xv97xN8wU3KyskdoRrdwBEGjx16lLMAA30rTbfLW0e-0vgpc2W_xoC9OoQAvD_BwE"
+                    class="btn btn-lg btn-block omb_btn-facebook">
+                    <i class="fa fa-facebook visible-xs"></i>
+                    <span class="hidden-xs">Facebook</span>
+                </a>
+            </div>
+            <div class="col-xs-4 col-sm-2">
+                <a href="https://mobile.twitter.com/i/flow/signup" class="btn btn-lg btn-block omb_btn-twitter">
+                    <i class="fa fa-twitter visible-xs"></i>
+                    <span class="hidden-xs">Twitter</span>
+                </a>
+            </div>
+            <div class="col-xs-4 col-sm-2">
+                <a href="https://accounts.google.com/signup/v2/webcreateaccount?hl=en&flowName=GlifWebSignIn&flowEntry=SignUp"
+                    class="btn btn-lg btn-block omb_btn-google">
+                    <i class="fa fa-google-plus visible-xs"></i>
+                    <span class="hidden-xs">Google+</span>
+                </a>
+            </div>
+        </div>
+        <div class="row omb_row-sm-offset-3 omb_loginOr">
+            <div style="text-align:center" class="col-xs-12 col-sm-6">
+                <hr class="omb_hrOr">
+                <span class="omb_spanOr">or</span>
+            </div>
+        </div>
+        <div class="row align-items-center">
+            <div class="col">
+            </div>
+            <div class="col">
+                <form action="/login" method="post">
+                   <div class="input-group">
+						<span class="input-group-addon"><i class="fa fa-user"></i></span>
+                        
+                        <input type="email" name="email" class="form-control" id="exampleInputEmail1"
+                            aria-describedby="emailHelp">
+                    </div>
+                    <br>
+                    <div class="input-group">
+                        <span class="form-group-addon"><i class="fa fa-lock"></i></span>
+                        
+                        <input type="password" name="password" class="form-control" id="exampleInputPassword1">
+                    </div>
+                    <br>
+                    <button type="submit" value="login" class="btn btn-lg btn-primary btn-block">Submit</button>
+                </form>
+                <div id = "checkbox" class="container">
+                    <div   class="col-xs-12 col-sm-3">
+                        <label class="checkbox">
+                            <input type="checkbox" value="remember-me">Remember Me
+                        </label>
+                    </div>
+                    <div class="col-xs-12 col-sm-3">
+                        <p style="text-align:right" class="omb_forgotPwd">
+                            <a href="#">Forgot password?</a>
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="col">
+            </div>
+        </div>
+        <div class="row align-items-end">
+            <div class="col">
+            </div>
+            <div class="col">
+                <p class="error">{{err}}</p>
+            </div>
+            <div class="col">
+            </div>
+
+        </div>
+    </div>
+
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
