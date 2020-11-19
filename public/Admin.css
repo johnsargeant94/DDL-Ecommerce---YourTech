@@ -1,0 +1,50 @@
+.parent{
+    background-color: aquamarine;
+    display: flex;
+}
+
+.container1 {
+   margin-left: 10%;
+   max-width: 50%;
+}
+
+.container2{
+    
+    max-width: 50%;
+    
+    margin-top: 0%;
+}
+.name{
+    margin-left: 40px;
+}
+#iname{
+    margin-left: 115px;
+}
+
+.email{
+    margin-left: 40px;
+}
+#iemail{
+    margin-left: 55px;
+}
+.password{
+    margin-left: 40px;
+}
+#ipassword{
+    margin-left: 85px;
+    
+}
+.age{
+    margin-left: 40px;
+    
+}
+#iage{
+    margin-left: 125px;
+   
+}
+.pnumber{
+    margin-left: 40px;
+}
+#ipnumber{
+    margin-left: 40px;
+}
