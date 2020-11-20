@@ -160,12 +160,9 @@ var shoppingCart = (function() {
       output += "<tr class='basketItems'>"
         + "<td>" + cartArray[i].name + "</td>" 
         + "<td>£" + cartArray[i].price + "</td>"
-        + "<td><div class='input-group'><button class='minus-item input-group-addon btn btn-primary' data-name=" + cartArray[i].name + ">-</button>"
+        + "<td><div class='input-group'><button class='invisible' data-name=" + cartArray[i].name + ">-</button>"
         + "<input type='number' class='item-count form-control' data-name='" + cartArray[i].name + "' value='" + cartArray[i].count + "'>"
         + "<input type='hidden' value='"+ cartArray[i].id + "'>"
-        + "<button class='plus-item btn btn-primary input-group-addon' data-name=" + cartArray[i].name + ">+</button></div></td>"
-        + "<td><button class='delete-item btn btn-danger' data-name=" + cartArray[i].name + ">X</button></td>"
-        + " = " 
         + "<td class='basketPrice'>£" + cartArray[i].total + "</td>" 
         +  "</tr>";
     }
