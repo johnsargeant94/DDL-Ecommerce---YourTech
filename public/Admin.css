@@ -1,6 +1,7 @@
 .parent{
     background-color: rgb(206, 209, 208);
     display: flex;
+    margin-bottom: 20px;
 }
 
 .container1 {
@@ -66,6 +67,14 @@
     cursor: pointer;
     margin-left: 70%;
     margin-top: 20%;
+}
+
+.productH1{
+    margin-left: 50px;
+}
+
+.table-products{
+    margin: 30px;
 }
     
     
