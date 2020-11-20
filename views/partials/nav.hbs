@@ -23,7 +23,7 @@
 
         <li class="nav-item">
           <a href="/" class="nav-link waves-effect">
-            <i class="fas fa-shopping-cart"></i>
+            <i class="fas fa-home"></i>
             Home
           </a>
         </li>
@@ -57,8 +57,10 @@
         {{/if}}
         
         <li class="nav-item pl-2 mb-2 mb-md-0">
-          <a class="logout" href="/logout" type="button"
-            class="btn btn-outline-info btn-md btn-rounded btn-navbar waves-effect waves-light">Logout</a>
+          <a class="nav-link waves-effect" href="/logout" type="button">
+          <i class="fas fa-sign-out-alt"></i>
+            Logout
+            </a>
         </li>
         
         {{else}}
@@ -69,8 +71,10 @@
           </a>
         </li>
         <li class="nav-item pl-2 mb-2 mb-md-0">
-          <a href="/signup" type="button"
-            class="btn btn-outline-info btn-md btn-rounded btn-navbar waves-effect waves-light">Signup</a>
+          <a href="/signup" type="button" class="nav-link waves-effect">
+          <i class="fas fa-user-plus"></i>
+          Signup
+          </a>
         </li>
       
         {{/if}}
