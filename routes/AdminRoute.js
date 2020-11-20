@@ -53,6 +53,18 @@ AdminRoute.post('/admin', checkAdminLoggedIn, async (req, res) => {
     res.redirect('/admin');
 
     //Create Product
+    
+})
+
+AdminRoute.delete('/admin/deleteProduct/', (req, res) => {
+    // const {id} = req.body
+
+    // deleteOne({})
+})
+
+AdminRoute.post('/admin/product', checkAdminLoggedIn, async (req, res) => {
+
+    //Create Product
     const { name, price, inStock, image, category } = req.body;
 
     const product = new ProductModel({
