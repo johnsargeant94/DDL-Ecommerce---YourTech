@@ -1,5 +1,5 @@
 .parent{
-    background-color: aquamarine;
+    background-color: rgb(206, 209, 208);
     display: flex;
 }
 
@@ -15,23 +15,23 @@
     margin-top: 0%;
 }
 .name{
-    margin-left: 40px;
+    margin-left: 9%;
 }
 #iname{
-    margin-left: 115px;
+    margin-left: 25%;
 }
 
 .email{
     margin-left: 40px;
 }
 #iemail{
-    margin-left: 55px;
+    margin-left: 11.5%;
 }
 .password{
     margin-left: 40px;
 }
 #ipassword{
-    margin-left: 85px;
+    margin-left: 19%;
     
 }
 .age{
@@ -39,7 +39,7 @@
     
 }
 #iage{
-    margin-left: 125px;
+    margin-left: 29%;
    
 }
 .pnumber{
@@ -48,3 +48,24 @@
 #ipnumber{
     margin-left: 40px;
 }
+#role{
+    margin-left: 40px;
+}
+#role1{
+    margin-left: 120px;
+}
+#submit{
+    padding: 10px 32px;
+    cursor: pointer;
+    margin-left: 95%;
+    margin-top: 3%;
+   
+}
+#button{
+    padding: 10px 32px;
+    cursor: pointer;
+    margin-left: 70%;
+    margin-top: 20%;
+}
+    
+    

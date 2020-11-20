@@ -6,7 +6,7 @@
     <h4>Welcome to the Admin page.</h4>
   </div>
 </section>
-
+{{!-- // ------------------------------------------------------------------------------------------------ // --}}
 <div class="parent">
     <div class="container1">
       <h1>Add a Product</h1>
@@ -43,9 +43,9 @@
               <option value="Tablet">Tablet</option>
               <option value="Mobile phones">Mobile phones</option>
             </select>
-
+          
               <div class="col-sm-10">
-                <button type="submit" class="btn btn-primary" name="create">Add</button>
+                <button id="button" type="submit" class="btn btn-primary" name="create">Add</button>
               </div>
             </div>
         </form>
@@ -54,7 +54,7 @@
       <p>{{err}}</p>
       </div>
     
-
+{{!-- // ------------------------------------------------------------------------------------------------// --}}
       <div class="container2">
         <h1>Create User</h1>
 
@@ -93,21 +93,28 @@
             <input id="ipnumber" type="tel" name="phoneNumber" size="30">
           </div>
 
-        <label class="col-sm-2 col-form-label" for="role">Role:</label>
-          <div class="col-sm-3">
-            <select id="role" name="role" class="form-control">
-          <option value="Admin">Admin</option>
-          <option value="User">User</option>
-        </select>
-    
-      <button id="submit" type="submit" value="login" class="btn btn-primary">Submit</button>
+        <div id = "role">
+          <label for="role">Role</label>
 
+              <select id="role1" name="role">
+              	<option value="Admin">Admin</option>
+              	<option value="User">User</option>
+              	
+              </select>
+        </div>
+        
+
+
+    <div class="col-sm-10">
+      <button id="submit" type="submit" value="login" class="btn btn-primary">Submit</button>
+    </div>
+    
       </form>
     </div>
   </div>
 </div>
 
-    
+  {{!-- //-----------------------------------------------------------------------------------------------// --}}
 
 <h1>Products</h1>
 

@@ -10,3 +10,19 @@
 .nav-item1 .mobilephoneb {
     padding: 0.2 0.5;
 }
+.col{
+    border-style: solid;
+    border-color: rgb(190, 196, 196);
+    padding: 10px ;
+    border-collapse: separate;
+  border-spacing: 10px;
+  margin: 5px;
+  max-width: 9cm;
+}
+.row{
+    
+    max-width: max-content;
+}
+.btn-group{
+    float: right;
+}
