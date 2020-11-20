@@ -15,3 +15,7 @@
     padding-top: 10px;
     padding-right: 50px;
 }
+.input-group{
+    background-color: aqua;
+    max-width: fit-content;
+}
