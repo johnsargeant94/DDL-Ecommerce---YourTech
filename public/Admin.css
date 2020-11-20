@@ -60,13 +60,14 @@
     cursor: pointer;
     margin-left: 95%;
     margin-top: 3%;
+    margin-bottom: 5%;
    
 }
 #button{
     padding: 10px 32px;
     cursor: pointer;
-    margin-left: 70%;
-    margin-top: 20%;
+    margin-left: 100%;
+    margin-top: 15%;
 }
 
 .productH1{
@@ -75,6 +76,10 @@
 
 .table-products{
     margin: 30px;
+}
+#category{
+    margin-left: 75px;
+   
 }
     
     
