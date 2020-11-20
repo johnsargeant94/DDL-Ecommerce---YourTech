@@ -6,5 +6,12 @@
 } 
 #total{
     text-align: right;
+    padding-right: 80px;
     
+}
+
+.btn-clear-order{
+    float: right;
+    padding-top: 10px;
+    padding-right: 50px;
 }
