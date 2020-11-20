@@ -54,5 +54,18 @@
 #role1{
     margin-left: 120px;
 }
+#submit{
+    padding: 10px 32px;
+    cursor: pointer;
+    margin-left: 95%;
+    margin-top: 3%;
+   
+}
+#button{
+    padding: 10px 32px;
+    cursor: pointer;
+    margin-left: 70%;
+    margin-top: 20%;
+}
     
     
